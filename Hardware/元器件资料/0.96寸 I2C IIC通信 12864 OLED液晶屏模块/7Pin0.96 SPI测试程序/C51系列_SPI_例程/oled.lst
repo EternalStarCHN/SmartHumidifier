@@ -1,0 +1,351 @@
+C51 COMPILER V9.56.0.0   OLED                                                              03/05/2019 15:36:50 PAGE 1   
+
+
+C51 COMPILER V9.56.0.0, COMPILATION OF MODULE OLED
+OBJECT MODULE PLACED IN oled.obj
+COMPILER INVOKED BY: D:\Program Files (tech)\Keil_v5\C51\BIN\C51.EXE SRC\oled.c OPTIMIZE(8,SPEED) BROWSE INCDIR(.\SRC) D
+                    -EBUG OBJECTEXTEND PRINT(.\oled.lst) TABS(2) OBJECT(oled.obj)
+
+line level    source
+
+   1          //////////////////////////////////////////////////////////////////////////////////   
+   2          //本程序只供学习使用，未经作者许可，不得用于其它任何用途
+   3          //中景园电子
+   4          //店铺地址：http://shop73023976.taobao.com/?spm=2013.1.0.0.M4PqC2
+   5          //
+   6          //  文 件 名   : main.c
+   7          //  版 本 号   : v2.0
+   8          //  作    者   : HuangKai
+   9          //  生成日期   : 2014-0101
+  10          //  最近修改   : 
+  11          //  功能描述   : OLED 4接口演示例程(51系列)
+  12          //              说明: 
+  13          //              ----------------------------------------------------------------
+  14          //              GND    电源地
+  15          //              VCC  接5V或3.3v电源
+  16          //              D0   P1^0（SCL）
+  17          //              D1   P1^1（SDA）
+  18          //              RES  接P12
+  19          //              DC   接P13
+  20          //              CS   接P14               
+  21          //              ----------------------------------------------------------------
+  22          // 修改历史   :
+  23          // 日    期   : 
+  24          // 作    者   : HuangKai
+  25          // 修改内容   : 创建文件
+  26          //版权所有，盗版必究。
+  27          //Copyright(C) 中景园电子2014/3/16
+  28          //All rights reserved
+  29          //******************************************************************************/。
+  30          #include "oled.h"
+  31          //#include "stdlib.h"
+  32          #include "oledfont.h"    
+  33          //#include "delay.h"
+  34          //OLED的显存
+  35          //存放格式如下.
+  36          //[0]0 1 2 3 ... 127  
+  37          //[1]0 1 2 3 ... 127  
+  38          //[2]0 1 2 3 ... 127  
+  39          //[3]0 1 2 3 ... 127  
+  40          //[4]0 1 2 3 ... 127  
+  41          //[5]0 1 2 3 ... 127  
+  42          //[6]0 1 2 3 ... 127  
+  43          //[7]0 1 2 3 ... 127         
+  44          void delay_ms(unsigned int ms)
+  45          {                         
+  46   1        unsigned int a;
+  47   1        while(ms)
+  48   1        {
+  49   2          a=1800;
+  50   2          while(a--);
+  51   2          ms--;
+  52   2        }
+  53   1        return;
+  54   1      }
+C51 COMPILER V9.56.0.0   OLED                                                              03/05/2019 15:36:50 PAGE 2   
+
+  55          #if OLED_MODE==1
+              //向SSD1106写入一个字节。
+              //dat:要写入的数据/命令
+              //cmd:数据/命令标志 0,表示命令;1,表示数据;
+              void OLED_WR_Byte(u8 dat,u8 cmd)
+              {
+                DATAOUT(dat);     
+                if(cmd)
+                  OLED_DC_Set();
+                else 
+                  OLED_DC_Clr();       
+                OLED_CS_Clr();
+                OLED_WR_Clr();   
+                OLED_WR_Set();
+                OLED_CS_Set();    
+                OLED_DC_Set();   
+              }             
+              #else
+  73          //向SSD1306写入一个字节。
+  74          //dat:要写入的数据/命令
+  75          //cmd:数据/命令标志 0,表示命令;1,表示数据;
+  76          void OLED_WR_Byte(u8 dat,u8 cmd)
+  77          { 
+  78   1        u8 i;       
+  79   1        if(cmd)
+  80   1          OLED_DC_Set();
+  81   1        else 
+  82   1          OLED_DC_Clr();      
+  83   1        OLED_CS_Clr();
+  84   1        for(i=0;i<8;i++)
+  85   1        {       
+  86   2          OLED_SCLK_Clr();
+  87   2          if(dat&0x80)
+  88   2            {
+  89   3             OLED_SDIN_Set();
+  90   3            }
+  91   2      else
+  92   2             OLED_SDIN_Clr();
+  93   2              OLED_SCLK_Set();
+  94   2          dat<<=1;   
+  95   2        }             
+  96   1        OLED_CS_Set();
+  97   1        OLED_DC_Set();      
+  98   1      } 
+  99          #endif
+ 100            void OLED_Set_Pos(unsigned char x, unsigned char y) 
+ 101          { 
+ 102   1        OLED_WR_Byte(0xb0+y,OLED_CMD);
+ 103   1        OLED_WR_Byte(((x&0xf0)>>4)|0x10,OLED_CMD);
+ 104   1        OLED_WR_Byte((x&0x0f)|0x01,OLED_CMD); 
+ 105   1      }       
+ 106          //开启OLED显示    
+ 107          void OLED_Display_On(void)
+ 108          {
+ 109   1        OLED_WR_Byte(0X8D,OLED_CMD);  //SET DCDC命令
+ 110   1        OLED_WR_Byte(0X14,OLED_CMD);  //DCDC ON
+ 111   1        OLED_WR_Byte(0XAF,OLED_CMD);  //DISPLAY ON
+ 112   1      }
+ 113          //关闭OLED显示     
+ 114          void OLED_Display_Off(void)
+ 115          {
+ 116   1        OLED_WR_Byte(0X8D,OLED_CMD);  //SET DCDC命令
+C51 COMPILER V9.56.0.0   OLED                                                              03/05/2019 15:36:50 PAGE 3   
+
+ 117   1        OLED_WR_Byte(0X10,OLED_CMD);  //DCDC OFF
+ 118   1        OLED_WR_Byte(0XAE,OLED_CMD);  //DISPLAY OFF
+ 119   1      }            
+ 120          //清屏函数,清完屏,整个屏幕是黑色的!和没点亮一样!!!    
+ 121          void OLED_Clear(void)  
+ 122          {  
+ 123   1        u8 i,n;       
+ 124   1        for(i=0;i<8;i++)  
+ 125   1        {  
+ 126   2          OLED_WR_Byte (0xb0+i,OLED_CMD);    //设置页地址（0~7）
+ 127   2          OLED_WR_Byte (0x00,OLED_CMD);      //设置显示位置—列低地址
+ 128   2          OLED_WR_Byte (0x10,OLED_CMD);      //设置显示位置—列高地址   
+ 129   2          for(n=0;n<128;n++)OLED_WR_Byte(0,OLED_DATA); 
+ 130   2        } //更新显示
+ 131   1      }
+ 132          
+ 133          
+ 134          //在指定位置显示一个字符,包括部分字符
+ 135          //x:0~127
+ 136          //y:0~63
+ 137          //mode:0,反白显示;1,正常显示         
+ 138          //size:选择字体 16/12 
+ 139          void OLED_ShowChar(u8 x,u8 y,u8 chr)
+ 140          {       
+ 141   1        unsigned char c=0,i=0;  
+ 142   1          c=chr-' ';//得到偏移后的值      
+ 143   1          if(x>Max_Column-1){x=0;y=y+2;}
+ 144   1          if(SIZE ==16)
+ 145   1            {
+ 146   2            OLED_Set_Pos(x,y);  
+ 147   2            for(i=0;i<8;i++)
+ 148   2            OLED_WR_Byte(F8X16[c*16+i],OLED_DATA);
+ 149   2            OLED_Set_Pos(x,y+1);
+ 150   2            for(i=0;i<8;i++)
+ 151   2            OLED_WR_Byte(F8X16[c*16+i+8],OLED_DATA);
+ 152   2            }
+ 153   1            else {  
+ 154   2              OLED_Set_Pos(x,y+1);
+ 155   2              for(i=0;i<6;i++)
+ 156   2              OLED_WR_Byte(F6x8[c][i],OLED_DATA);
+ 157   2              
+ 158   2            }
+ 159   1      }
+ 160          //m^n函数
+ 161          u32 oled_pow(u8 m,u8 n)
+ 162          {
+ 163   1        u32 result=1;  
+ 164   1        while(n--)result*=m;    
+ 165   1        return result;
+ 166   1      }         
+ 167          //显示2个数字
+ 168          //x,y :起点坐标  
+ 169          //len :数字的位数
+ 170          //size:字体大小
+ 171          //mode:模式 0,填充模式;1,叠加模式
+ 172          //num:数值(0~4294967295);       
+ 173          void OLED_ShowNum(u8 x,u8 y,u32 num,u8 len,u8 size2)
+ 174          {           
+ 175   1        u8 t,temp;
+ 176   1        u8 enshow=0;               
+ 177   1        for(t=0;t<len;t++)
+ 178   1        {
+C51 COMPILER V9.56.0.0   OLED                                                              03/05/2019 15:36:50 PAGE 4   
+
+ 179   2          temp=(num/oled_pow(10,len-t-1))%10;
+ 180   2          if(enshow==0&&t<(len-1))
+ 181   2          {
+ 182   3            if(temp==0)
+ 183   3            {
+ 184   4              OLED_ShowChar(x+(size2/2)*t,y,' ');
+ 185   4              continue;
+ 186   4            }else enshow=1; 
+ 187   3             
+ 188   3          }
+ 189   2          OLED_ShowChar(x+(size2/2)*t,y,temp+'0'); 
+ 190   2        }
+ 191   1      } 
+ 192          //显示一个字符号串
+ 193          void OLED_ShowString(u8 x,u8 y,u8 *chr)
+ 194          {
+ 195   1        unsigned char j=0;
+ 196   1        while (chr[j]!='\0')
+ 197   1        {   OLED_ShowChar(x,y,chr[j]);
+ 198   2            x+=8;
+ 199   2          if(x>120){x=0;y+=2;}
+ 200   2            j++;
+ 201   2        }
+ 202   1      }
+ 203          //显示汉字
+ 204          void OLED_ShowCHinese(u8 x,u8 y,u8 no)
+ 205          {               
+ 206   1        u8 t,adder=0;
+ 207   1        OLED_Set_Pos(x,y);  
+ 208   1          for(t=0;t<16;t++)
+ 209   1          {
+ 210   2              OLED_WR_Byte(Hzk[2*no][t],OLED_DATA);
+ 211   2              adder+=1;
+ 212   2           }  
+ 213   1          OLED_Set_Pos(x,y+1);  
+ 214   1          for(t=0;t<16;t++)
+ 215   1            { 
+ 216   2              OLED_WR_Byte(Hzk[2*no+1][t],OLED_DATA);
+ 217   2              adder+=1;
+ 218   2            }         
+ 219   1      }
+ 220          /***********功能描述：显示显示BMP图片128×64起始点坐标(x,y),x的范围0～127，y为页的范围0～7****************
+             -*/
+ 221          void OLED_DrawBMP(unsigned char x0, unsigned char y0,unsigned char x1, unsigned char y1,unsigned char BMP[
+             -])
+ 222          {   
+ 223   1       unsigned int j=0;
+ 224   1       unsigned char x,y;
+ 225   1        
+ 226   1        if(y1%8==0) y=y1/8;      
+ 227   1        else y=y1/8+1;
+ 228   1        for(y=y0;y<y1;y++)
+ 229   1        {
+ 230   2          OLED_Set_Pos(x0,y);
+ 231   2          for(x=x0;x<x1;x++)
+ 232   2            {      
+ 233   3              OLED_WR_Byte(BMP[j++],OLED_DATA);       
+ 234   3            }
+ 235   2        }
+ 236   1      } 
+ 237          
+ 238          
+C51 COMPILER V9.56.0.0   OLED                                                              03/05/2019 15:36:50 PAGE 5   
+
+ 239          //初始化SSD1306             
+ 240          void OLED_Init(void)
+ 241          {
+ 242   1       
+ 243   1      
+ 244   1       
+ 245   1        OLED_RST_Set();
+ 246   1        delay_ms(100);
+ 247   1        OLED_RST_Clr();
+ 248   1        delay_ms(100);
+ 249   1        OLED_RST_Set(); 
+ 250   1        /*          
+ 251   1        OLED_WR_Byte(0xAE,OLED_CMD);//--turn off oled panel
+ 252   1        OLED_WR_Byte(0x00,OLED_CMD);//---set low column address
+ 253   1        OLED_WR_Byte(0x10,OLED_CMD);//---set high column address
+ 254   1        OLED_WR_Byte(0x40,OLED_CMD);//--set start line address  Set Mapping RAM Display Start Line (0x00~0x3F)
+ 255   1        OLED_WR_Byte(0x81,OLED_CMD);//--set contrast control register
+ 256   1        OLED_WR_Byte(0xCF,OLED_CMD); // Set SEG Output Current Brightness
+ 257   1        OLED_WR_Byte(0xA1,OLED_CMD);//--Set SEG/Column Mapping     0xa0左右反置 0xa1正常
+ 258   1        OLED_WR_Byte(0xC8,OLED_CMD);//Set COM/Row Scan Direction   0xc0上下反置 0xc8正常
+ 259   1        OLED_WR_Byte(0xA6,OLED_CMD);//--set normal display
+ 260   1        OLED_WR_Byte(0xA8,OLED_CMD);//--set multiplex ratio(1 to 64)
+ 261   1        OLED_WR_Byte(0x3f,OLED_CMD);//--1/64 duty
+ 262   1        OLED_WR_Byte(0xD3,OLED_CMD);//-set display offset Shift Mapping RAM Counter (0x00~0x3F)
+ 263   1        OLED_WR_Byte(0x00,OLED_CMD);//-not offset
+ 264   1        OLED_WR_Byte(0xd5,OLED_CMD);//--set display clock divide ratio/oscillator frequency
+ 265   1        OLED_WR_Byte(0x80,OLED_CMD);//--set divide ratio, Set Clock as 100 Frames/Sec
+ 266   1        OLED_WR_Byte(0xD9,OLED_CMD);//--set pre-charge period
+ 267   1        OLED_WR_Byte(0xF1,OLED_CMD);//Set Pre-Charge as 15 Clocks & Discharge as 1 Clock
+ 268   1        OLED_WR_Byte(0xDA,OLED_CMD);//--set com pins hardware configuration
+ 269   1        OLED_WR_Byte(0x12,OLED_CMD);
+ 270   1        OLED_WR_Byte(0xDB,OLED_CMD);//--set vcomh
+ 271   1        OLED_WR_Byte(0x40,OLED_CMD);//Set VCOM Deselect Level
+ 272   1        OLED_WR_Byte(0x20,OLED_CMD);//-Set Page Addressing Mode (0x00/0x01/0x02)
+ 273   1        OLED_WR_Byte(0x02,OLED_CMD);//
+ 274   1        OLED_WR_Byte(0x8D,OLED_CMD);//--set Charge Pump enable/disable
+ 275   1        OLED_WR_Byte(0x14,OLED_CMD);//--set(0x10) disable
+ 276   1        OLED_WR_Byte(0xA4,OLED_CMD);// Disable Entire Display On (0xa4/0xa5)
+ 277   1        OLED_WR_Byte(0xA6,OLED_CMD);// Disable Inverse Display On (0xa6/a7) 
+ 278   1        OLED_WR_Byte(0xAF,OLED_CMD);//--turn on oled panel
+ 279   1        */
+ 280   1      
+ 281   1        OLED_WR_Byte(0xAE,OLED_CMD);//--turn off oled panel
+ 282   1        OLED_WR_Byte(0x00,OLED_CMD);//---set low column address
+ 283   1        OLED_WR_Byte(0x10,OLED_CMD);//---set high column address
+ 284   1        OLED_WR_Byte(0x40,OLED_CMD);//--set start line address  Set Mapping RAM Display Start Line (0x00~0x3F)
+ 285   1        OLED_WR_Byte(0x81,OLED_CMD);//--set contrast control register
+ 286   1        OLED_WR_Byte(0xCF,OLED_CMD); // Set SEG Output Current Brightness
+ 287   1        OLED_WR_Byte(0xA1,OLED_CMD);//--Set SEG/Column Mapping     0xa0左右反置 0xa1正常
+ 288   1        OLED_WR_Byte(0xC8,OLED_CMD);//Set COM/Row Scan Direction   0xc0上下反置 0xc8正常
+ 289   1        OLED_WR_Byte(0xA6,OLED_CMD);//--set normal display
+ 290   1        OLED_WR_Byte(0xA8,OLED_CMD);//--set multiplex ratio(1 to 64)
+ 291   1        OLED_WR_Byte(0x3f,OLED_CMD);//--1/64 duty
+ 292   1        OLED_WR_Byte(0xD3,OLED_CMD);//-set display offset Shift Mapping RAM Counter (0x00~0x3F)
+ 293   1        OLED_WR_Byte(0x00,OLED_CMD);//-not offset
+ 294   1        OLED_WR_Byte(0xd5,OLED_CMD);//--set display clock divide ratio/oscillator frequency
+ 295   1        OLED_WR_Byte(0x80,OLED_CMD);//--set divide ratio, Set Clock as 100 Frames/Sec
+ 296   1        OLED_WR_Byte(0xD9,OLED_CMD);//--set pre-charge period
+ 297   1        OLED_WR_Byte(0xF1,OLED_CMD);//Set Pre-Charge as 15 Clocks & Discharge as 1 Clock
+ 298   1        OLED_WR_Byte(0xDA,OLED_CMD);//--set com pins hardware configuration
+ 299   1        OLED_WR_Byte(0x12,OLED_CMD);
+ 300   1        OLED_WR_Byte(0xDB,OLED_CMD);//--set vcomh
+C51 COMPILER V9.56.0.0   OLED                                                              03/05/2019 15:36:50 PAGE 6   
+
+ 301   1        OLED_WR_Byte(0x40,OLED_CMD);//Set VCOM Deselect Level
+ 302   1        OLED_WR_Byte(0x20,OLED_CMD);//-Set Page Addressing Mode (0x00/0x01/0x02)
+ 303   1        OLED_WR_Byte(0x02,OLED_CMD);//
+ 304   1        OLED_WR_Byte(0x8D,OLED_CMD);//--set Charge Pump enable/disable
+ 305   1        OLED_WR_Byte(0x14,OLED_CMD);//--set(0x10) disable
+ 306   1        OLED_WR_Byte(0xA4,OLED_CMD);// Disable Entire Display On (0xa4/0xa5)
+ 307   1        OLED_WR_Byte(0xA6,OLED_CMD);// Disable Inverse Display On (0xa6/a7) 
+ 308   1        OLED_WR_Byte(0xAF,OLED_CMD);//--turn on oled panel
+ 309   1        
+ 310   1        OLED_WR_Byte(0xAF,OLED_CMD); /*display ON*/ 
+ 311   1        OLED_Clear();
+ 312   1        OLED_Set_Pos(0,0);  
+ 313   1      }  
+ 314          
+*** WARNING C294 IN LINE 154 OF SRC\oled.c: unreachable code
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    830    ----
+   CONSTANT SIZE    =   2328    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      27
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

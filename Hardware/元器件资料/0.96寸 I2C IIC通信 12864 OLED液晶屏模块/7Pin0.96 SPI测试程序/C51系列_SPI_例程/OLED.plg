@@ -1,0 +1,22 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\Administrator\Desktop\000\中景园电子0.96OLED显示屏_C51系列_SPI_例程\M096_C51_SPI_V1.0\OLED.uvproj
+Project File Date:  05/03/2014
+
+<h2>Output:</h2>
+Rebuild target 'Target 1'
+assembling STARTUP.A51...
+compiling main.c...
+compiling oled.c...
+SRC\oled.c(154): warning C294: unreachable code
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?OLED_DISPLAY_ON?OLED
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?OLED_DISPLAY_OFF?OLED
+Program Size: data=20.0 xdata=0 code=5840
+creating hex file from "OLED"...
+"OLED" - 0 Error(s), 3 Warning(s).
