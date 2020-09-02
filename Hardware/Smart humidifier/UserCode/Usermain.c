@@ -2,7 +2,6 @@
 
 unsigned char BMP1[] =
 { 
-
 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
@@ -69,23 +68,27 @@ unsigned char BMP1[] =
 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
 };
 
-int Usermain(void)
+void Usermain(void)
 { 
-	
+	UserInit();
 	while(1)
 	{	
-		OLED_ShowStr(0, 0, "Yellow", 1);//显示字符串
-		OLED_ShowStr(0, 1, "Yellow", 1);//显示字符串
-		OLED_ShowStr(0, 2, "Blue", 1);//显示字符串
-		OLED_ShowStr(0, 3, "Blue", 1);//显示字符串
-		OLED_ShowStr(0, 4, "Blue", 1);//显示字符串
-		OLED_ShowStr(0, 5, "Blue", 1);//显示字符串
-		OLED_ShowStr(0, 6, "Blue", 1);//显示字符串
-		OLED_ShowStr(0, 7, "Blue", 1);//显示字符串		
-		HAL_Delay(1000);//延时0.5s
-		OLED_CLS();
-		OLED_DrawBMP(0,0,128,8,BMP1);
-		HAL_Delay(1000);
-		OLED_CLS();
+		Esp8266_StatusConfirm();
+//		OLED_ShowStr(0, 0, "Yellow", 1);//显示字符串
+//		OLED_ShowStr(0, 1, "Yellow", 1);//显示字符串
+//		OLED_ShowStr(0, 2, "Blue", 1);//显示字符串
+//		OLED_ShowStr(0, 3, "Blue", 1);//显示字符串
+//		OLED_ShowStr(0, 4, "Blue", 1);//显示字符串
+//		OLED_ShowStr(0, 5, "Blue", 1);//显示字符串
+//		OLED_ShowStr(0, 6, "Blue", 1);//显示字符串
+//		OLED_ShowStr(0, 7, "Blue", 1);//显示字符串		
+//		HAL_Delay(1000);//延时0.5s
+//		OLED_CLS();
 	}
+}
+void UserInit(void)
+{
+		OLED_DrawBMP(0,0,128,8,BMP1);
+		HAL_Delay(300);
+		OLED_CLS();
 }

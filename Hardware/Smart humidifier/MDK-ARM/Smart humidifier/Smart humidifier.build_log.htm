@@ -22,87 +22,29 @@ Dialog DLL:      TCM.DLL V1.42.0.0
  
 <h2>Project:</h2>
 F:\Desktop\Graduation-Design\Hardware\Smart humidifier\MDK-ARM\Smart humidifier.uvprojx
-Project File Date:  09/01/2020
+Project File Date:  09/02/2020
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.14', folder: 'D:\Software\Keil_v5\ARM\ARMCLANG\Bin'
-Rebuild target 'Smart humidifier'
-compiling stm32f1xx_hal_gpio_ex.c...
-compiling gpio.c...
-compiling stm32f1xx_hal_msp.c...
-compiling i2c.c...
-compiling main.c...
-compiling stm32f1xx_it.c...
-assembling startup_stm32f103xb.s...
-compiling stm32f1xx_hal.c...
-compiling stm32f1xx_hal_rcc_ex.c...
-compiling stm32f1xx_hal_gpio.c...
-compiling stm32f1xx_hal_cortex.c...
-compiling stm32f1xx_hal_dma.c...
-compiling stm32f1xx_hal_rcc.c...
-compiling stm32f1xx_hal_pwr.c...
-compiling stm32f1xx_hal_flash.c...
-compiling stm32f1xx_hal_exti.c...
-compiling stm32f1xx_hal_tim.c...
-compiling stm32f1xx_hal_flash_ex.c...
-compiling stm32f1xx_hal_tim_ex.c...
-compiling system_stm32f1xx.c...
-../UserCode/Usermain.c(77): warning: passing 'char [7]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
-                OLED_ShowStr(0, 0, "Yellow", 1);//显示字符串
-                                   ^~~~~~~~
+Build target 'Smart humidifier'
+../UserCode/esp8266/esp8266.c(7): warning: passing 'char [8]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+                OLED_ShowStr(85, 0, "Online ", 1);
+                                    ^~~~~~~~~
 ../UserCode/led\oled.h(18): note: passing argument to parameter 'ch' here
 void OLED_ShowStr(unsigned char x, unsigned char y, unsigned char ch[], unsigned char TextSize);//显示字符串
                                                                   ^
-../UserCode/Usermain.c(78): warning: passing 'char [7]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
-                OLED_ShowStr(0, 1, "Yellow", 1);//显示字符串
-                                   ^~~~~~~~
+../UserCode/esp8266/esp8266.c(11): warning: passing 'char [8]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+                OLED_ShowStr(85, 0, "Offline", 1);              
+                                    ^~~~~~~~~
 ../UserCode/led\oled.h(18): note: passing argument to parameter 'ch' here
 void OLED_ShowStr(unsigned char x, unsigned char y, unsigned char ch[], unsigned char TextSize);//显示字符串
                                                                   ^
-../UserCode/Usermain.c(79): warning: passing 'char [5]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
-                OLED_ShowStr(0, 2, "Blue", 1);//显示字符串
-                                   ^~~~~~
-../UserCode/led\oled.h(18): note: passing argument to parameter 'ch' here
-void OLED_ShowStr(unsigned char x, unsigned char y, unsigned char ch[], unsigned char TextSize);//显示字符串
-                                                                  ^
-../UserCode/Usermain.c(80): warning: passing 'char [5]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
-                OLED_ShowStr(0, 3, "Blue", 1);//显示字符串
-                                   ^~~~~~
-../UserCode/led\oled.h(18): note: passing argument to parameter 'ch' here
-void OLED_ShowStr(unsigned char x, unsigned char y, unsigned char ch[], unsigned char TextSize);//显示字符串
-                                                                  ^
-../UserCode/Usermain.c(81): warning: passing 'char [5]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
-                OLED_ShowStr(0, 4, "Blue", 1);//显示字符串
-                                   ^~~~~~
-../UserCode/led\oled.h(18): note: passing argument to parameter 'ch' here
-void OLED_ShowStr(unsigned char x, unsigned char y, unsigned char ch[], unsigned char TextSize);//显示字符串
-                                                                  ^
-../UserCode/Usermain.c(82): warning: passing 'char [5]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
-                OLED_ShowStr(0, 5, "Blue", 1);//显示字符串
-                                   ^~~~~~
-../UserCode/led\oled.h(18): note: passing argument to parameter 'ch' here
-void OLED_ShowStr(unsigned char x, unsigned char y, unsigned char ch[], unsigned char TextSize);//显示字符串
-                                                                  ^
-../UserCode/Usermain.c(83): warning: passing 'char [5]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
-                OLED_ShowStr(0, 6, "Blue", 1);//显示字符串
-                                   ^~~~~~
-../UserCode/led\oled.h(18): note: passing argument to parameter 'ch' here
-void OLED_ShowStr(unsigned char x, unsigned char y, unsigned char ch[], unsigned char TextSize);//显示字符串
-                                                                  ^
-../UserCode/Usermain.c(84): warning: passing 'char [5]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
-                OLED_ShowStr(0, 7, "Blue", 1);//显示字符串         
-                                   ^~~~~~
-../UserCode/led\oled.h(18): note: passing argument to parameter 'ch' here
-void OLED_ShowStr(unsigned char x, unsigned char y, unsigned char ch[], unsigned char TextSize);//显示字符串
-                                                                  ^
-8 warnings generated.
-compiling Usermain.c...
-compiling oled.c...
-compiling stm32f1xx_hal_i2c.c...
+2 warnings generated.
+compiling esp8266.c...
 linking...
-Program Size: Code=4724 RO-data=2376 RW-data=1036 ZI-data=1116  
+Program Size: Code=4724 RO-data=2364 RW-data=1036 ZI-data=1116  
 FromELF: creating hex file...
-"Smart humidifier\Smart humidifier.axf" - 0 Error(s), 8 Warning(s).
+"Smart humidifier\Smart humidifier.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -125,7 +67,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.4.0
-Build Time Elapsed:  00:00:03
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

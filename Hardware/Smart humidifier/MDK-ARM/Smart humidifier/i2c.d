@@ -25,4 +25,5 @@ smart\ humidifier/i2c.o: ..\Src\i2c.c ..\Inc\i2c.h ..\Inc\main.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash_ex.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h \
-  ..\UserCode\Usermain.h ..\UserCode\led\oled.h
+  ..\UserCode\Usermain.h ..\UserCode\led\oled.h \
+  ..\UserCode\esp8266\esp8266.h ..\Inc\gpio.h
