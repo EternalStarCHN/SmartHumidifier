@@ -47,11 +47,11 @@ void MX_GPIO_Init(void)
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
-  /*Configure GPIO pin : PtPin */
-  GPIO_InitStruct.Pin = ESP8266_State_Pin;
+  /*Configure GPIO pins : PBPin PBPin */
+  GPIO_InitStruct.Pin = Humidifier_State_Pin|ESP8266_State_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
-  HAL_GPIO_Init(ESP8266_State_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 }
 

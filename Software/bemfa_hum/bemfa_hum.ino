@@ -23,8 +23,9 @@
 #define UID  "b9e4ceb2c84ab8e8368d1a88e352540b"
 //主题名字，可在控制台新建
 #define TOPIC  "Humidifier003"
-//单片机LED引脚值
-const int LED_Pin = 2;
+//单片机引脚值
+const int Hum_Pin = 0;//加湿器控制引脚(LOW:停止;HIGH:运行)
+const int Con_Pin = 2;//模块联网状态(LOW:连接;HIGH:断开)
 
 //**************************************************//
 
@@ -110,12 +111,11 @@ void startTCPClient(){
 */
 void doTCPClientTick(){
  //检查是否断开，断开后重连
-   if(WiFi.status() != WL_CONNECTED) return;
+  if(WiFi.status() != WL_CONNECTED) return;
 
-  if (!TCPclient.connected()) {//断开重连
-
+  if (!TCPclient.connected()){//断开重连
+  digitalWrite(Con_Pin,HIGH);//连接失败熄灭
   if(preTCPConnected == true){
-
     preTCPConnected = false;
     preTCPStartTick = millis();
     Serial.println();
@@ -124,9 +124,11 @@ void doTCPClientTick(){
   }
   else if(millis() - preTCPStartTick > 1*1000)//重新连接
     startTCPClient();
+    digitalWrite(Con_Pin,HIGH);
   }
   else
   {
+    digitalWrite(Con_Pin,LOW);//连接成功亮灯
     if (TCPclient.available()) {//收数据
       char c =TCPclient.read();
       TcpClient_Buff +=c;
@@ -207,21 +209,23 @@ void doWiFiTick(){
 }
 //打开加湿器
 void turnOnLed(){
-  Serial.println("Turn ON");
-  digitalWrite(LED_Pin,LOW);
+  //Serial.println("Turn ON");
+  digitalWrite(Hum_Pin,HIGH);
 }
 //关闭加湿器
 void turnOffLed(){
-  Serial.println("Turn OFF");
-    digitalWrite(LED_Pin,HIGH);
+  //Serial.println("Turn OFF");
+    digitalWrite(Hum_Pin,LOW);
 }
 
 
 // 初始化，相当于main 函数
 void setup() {
   Serial.begin(115200);
-  pinMode(LED_Pin,OUTPUT);
-  digitalWrite(LED_Pin,LOW);//GPIO2引脚初始值
+  pinMode(Hum_Pin,OUTPUT);
+  pinMode(Con_Pin,OUTPUT);
+  digitalWrite(Con_Pin,HIGH);//GPIO0引脚初始值
+  digitalWrite(Hum_Pin,LOW);//GPIO2引脚初始值
 }
 
 //循环
