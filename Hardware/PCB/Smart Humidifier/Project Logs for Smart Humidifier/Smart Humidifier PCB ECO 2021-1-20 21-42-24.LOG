@@ -1,0 +1,7 @@
+Added Component: Designator=J1(Fe-HDR2X4/2.54-S)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=J1-2
+Added Pin To Net: NetName=PB5 Pin=J1-4
+Added Pin To Net: NetName=PB4 Pin=J1-6
+Added Pin To Net: NetName=VCC3V3 Pin=J1-7
+Added Member To Class: ClassName=Smart Humidifier Member=Component J1 Female HDR2X4
