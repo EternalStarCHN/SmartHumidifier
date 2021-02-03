@@ -16,9 +16,9 @@
 //********************需要修改的部分*******************//
 
 //WIFI名称，区分大小写，不要写错
-#define DEFAULT_STASSID  "EternalStarHonorV20"
+#define DEFAULT_STASSID  "TP-LINK_DF5B"
 //WIFI密码
-#define DEFAULT_STAPSW   "asdfghjkl"
+#define DEFAULT_STAPSW   "yx990510"
 //用户私钥，可在控制台获取,修改为自己的UID
 #define UID  "da0217f36672b026825823e4dfc5ffca"
 //主题名字，可在控制台新建

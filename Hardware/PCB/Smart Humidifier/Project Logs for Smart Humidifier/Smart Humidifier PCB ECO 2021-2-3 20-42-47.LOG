@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=VCC5V Pin=C24-2
+Removed Pin From Net: NetName=VCC5V Pin=C25-2
+Removed Pin From Net: NetName=VCC5V Pin=J4-1
+Removed Pin From Net: NetName=VCC5V Pin=L3-3
+Removed Pin From Net: NetName=VCC5V Pin=U6-7
+Added Pin To Net: NetName=NetC24_2 Pin=C24-2
+Added Pin To Net: NetName=NetC24_2 Pin=C25-2
+Added Pin To Net: NetName=NetC24_2 Pin=J4-1
+Added Pin To Net: NetName=NetC24_2 Pin=L3-3
+Added Pin To Net: NetName=NetC24_2 Pin=Q2-S
+Added Pin To Net: NetName=NetC24_2 Pin=R22-2
+Added Pin To Net: NetName=NetC24_2 Pin=U6-7
+Added Net: Name=NetC24_2
