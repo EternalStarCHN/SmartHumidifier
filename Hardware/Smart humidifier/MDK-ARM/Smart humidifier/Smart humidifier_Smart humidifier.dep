@@ -1,10 +1,10 @@
 Dependencies for Project 'Smart humidifier', Target 'Smart humidifier': (DO NOT MODIFY !)
 CompilerVersion: 6140000::V6.14::ARMCLANG
-F (startup_stm32f103xb.s)(0x5F4F7083)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto -c-gdwarf-3 -Wa,armasm,--pd,"__MICROLIB SETA 1"-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 530" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"STM32F10X_MD SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o "smart humidifier/startup_stm32f103xb.o")
-F (../Src/main.c)(0x5F4F7080)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/main.o" -MD)
-I (..\Inc\main.h)(0x5F4F7080)
+F (startup_stm32f103xb.s)(0x601BE057)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto -c-gdwarf-3 -Wa,armasm,--pd,"__MICROLIB SETA 1"-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 530" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"STM32F10X_MD SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o "smart humidifier/startup_stm32f103xb.o")
+F (../Src/main.c)(0x601BE053)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/main.o" -MD)
+I (..\Inc\main.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
-I (..\Inc\stm32f1xx_hal_conf.h)(0x5F4F707F)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
 I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x5EBE6D2D)
@@ -29,16 +29,17 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash_ex.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x5EBE6D35)
-I (..\UserCode\Usermain.h)(0x5F4F45FE)
+I (..\UserCode\Usermain.h)(0x601BE3C1)
 I (..\UserCode\led\oled.h)(0x5F4DEC49)
-I (..\Inc\i2c.h)(0x5F4F707F)
+I (..\Inc\i2c.h)(0x601BE053)
 I (..\UserCode\esp8266\esp8266.h)(0x5F4F4A11)
-I (..\Inc\gpio.h)(0x5F4F707F)
-F (../Src/gpio.c)(0x5F4F707F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/gpio.o" -MD)
-I (..\Inc\gpio.h)(0x5F4F707F)
-I (..\Inc\main.h)(0x5F4F7080)
+I (..\Inc\gpio.h)(0x601BE052)
+I (..\Inc\HumidifierControl.h)(0x601BE21F)
+F (../Src/gpio.c)(0x601BE052)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/gpio.o" -MD)
+I (..\Inc\gpio.h)(0x601BE052)
+I (..\Inc\main.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
-I (..\Inc\stm32f1xx_hal_conf.h)(0x5F4F707F)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
 I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x5EBE6D2D)
@@ -63,15 +64,16 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash_ex.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x5EBE6D35)
-I (..\UserCode\Usermain.h)(0x5F4F45FE)
+I (..\UserCode\Usermain.h)(0x601BE3C1)
 I (..\UserCode\led\oled.h)(0x5F4DEC49)
-I (..\Inc\i2c.h)(0x5F4F707F)
+I (..\Inc\i2c.h)(0x601BE053)
 I (..\UserCode\esp8266\esp8266.h)(0x5F4F4A11)
-F (../Src/i2c.c)(0x5F4F707F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/i2c.o" -MD)
-I (..\Inc\i2c.h)(0x5F4F707F)
-I (..\Inc\main.h)(0x5F4F7080)
+I (..\Inc\HumidifierControl.h)(0x601BE21F)
+F (../Src/i2c.c)(0x601BE052)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/i2c.o" -MD)
+I (..\Inc\i2c.h)(0x601BE053)
+I (..\Inc\main.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
-I (..\Inc\stm32f1xx_hal_conf.h)(0x5F4F707F)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
 I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x5EBE6D2D)
@@ -96,14 +98,15 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash_ex.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x5EBE6D35)
-I (..\UserCode\Usermain.h)(0x5F4F45FE)
+I (..\UserCode\Usermain.h)(0x601BE3C1)
 I (..\UserCode\led\oled.h)(0x5F4DEC49)
 I (..\UserCode\esp8266\esp8266.h)(0x5F4F4A11)
-I (..\Inc\gpio.h)(0x5F4F707F)
-F (../Src/stm32f1xx_it.c)(0x5F4F707F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/stm32f1xx_it.o" -MD)
-I (..\Inc\main.h)(0x5F4F7080)
+I (..\Inc\gpio.h)(0x601BE052)
+I (..\Inc\HumidifierControl.h)(0x601BE21F)
+F (../Src/stm32f1xx_it.c)(0x601BE053)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/stm32f1xx_it.o" -MD)
+I (..\Inc\main.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
-I (..\Inc\stm32f1xx_hal_conf.h)(0x5F4F707F)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
 I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x5EBE6D2D)
@@ -128,16 +131,17 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash_ex.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x5EBE6D35)
-I (..\UserCode\Usermain.h)(0x5F4F45FE)
+I (..\UserCode\Usermain.h)(0x601BE3C1)
 I (..\UserCode\led\oled.h)(0x5F4DEC49)
-I (..\Inc\i2c.h)(0x5F4F707F)
+I (..\Inc\i2c.h)(0x601BE053)
 I (..\UserCode\esp8266\esp8266.h)(0x5F4F4A11)
-I (..\Inc\gpio.h)(0x5F4F707F)
-I (..\Inc\stm32f1xx_it.h)(0x5F4F707F)
-F (../Src/stm32f1xx_hal_msp.c)(0x5F4F707F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/stm32f1xx_hal_msp.o" -MD)
-I (..\Inc\main.h)(0x5F4F7080)
+I (..\Inc\gpio.h)(0x601BE052)
+I (..\Inc\HumidifierControl.h)(0x601BE21F)
+I (..\Inc\stm32f1xx_it.h)(0x601BE053)
+F (../Src/stm32f1xx_hal_msp.c)(0x601BE053)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/stm32f1xx_hal_msp.o" -MD)
+I (..\Inc\main.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
-I (..\Inc\stm32f1xx_hal_conf.h)(0x5F4F707F)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
 I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x5EBE6D2D)
@@ -162,14 +166,15 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash_ex.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x5EBE6D35)
-I (..\UserCode\Usermain.h)(0x5F4F45FE)
+I (..\UserCode\Usermain.h)(0x601BE3C1)
 I (..\UserCode\led\oled.h)(0x5F4DEC49)
-I (..\Inc\i2c.h)(0x5F4F707F)
+I (..\Inc\i2c.h)(0x601BE053)
 I (..\UserCode\esp8266\esp8266.h)(0x5F4F4A11)
-I (..\Inc\gpio.h)(0x5F4F707F)
+I (..\Inc\gpio.h)(0x601BE052)
+I (..\Inc\HumidifierControl.h)(0x601BE21F)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c)(0x5EBE6D35)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/stm32f1xx_hal_gpio_ex.o" -MD)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
-I (..\Inc\stm32f1xx_hal_conf.h)(0x5F4F707F)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
 I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x5EBE6D2D)
@@ -196,7 +201,7 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x5EBE6D35)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c)(0x5EBE6D35)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/stm32f1xx_hal_i2c.o" -MD)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
-I (..\Inc\stm32f1xx_hal_conf.h)(0x5F4F707F)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
 I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x5EBE6D2D)
@@ -223,7 +228,7 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x5EBE6D35)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c)(0x5EBE6D35)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/stm32f1xx_hal.o" -MD)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
-I (..\Inc\stm32f1xx_hal_conf.h)(0x5F4F707F)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
 I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x5EBE6D2D)
@@ -250,7 +255,7 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x5EBE6D35)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c)(0x5EBE6D35)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/stm32f1xx_hal_rcc.o" -MD)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
-I (..\Inc\stm32f1xx_hal_conf.h)(0x5F4F707F)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
 I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x5EBE6D2D)
@@ -277,7 +282,7 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x5EBE6D35)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c)(0x5EBE6D35)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/stm32f1xx_hal_rcc_ex.o" -MD)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
-I (..\Inc\stm32f1xx_hal_conf.h)(0x5F4F707F)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
 I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x5EBE6D2D)
@@ -304,7 +309,7 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x5EBE6D35)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c)(0x5EBE6D35)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/stm32f1xx_hal_gpio.o" -MD)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
-I (..\Inc\stm32f1xx_hal_conf.h)(0x5F4F707F)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
 I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x5EBE6D2D)
@@ -331,7 +336,7 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x5EBE6D35)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c)(0x5EBE6D35)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/stm32f1xx_hal_dma.o" -MD)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
-I (..\Inc\stm32f1xx_hal_conf.h)(0x5F4F707F)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
 I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x5EBE6D2D)
@@ -358,7 +363,7 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x5EBE6D35)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c)(0x5EBE6D35)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/stm32f1xx_hal_cortex.o" -MD)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
-I (..\Inc\stm32f1xx_hal_conf.h)(0x5F4F707F)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
 I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x5EBE6D2D)
@@ -385,7 +390,7 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x5EBE6D35)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c)(0x5EBE6D35)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/stm32f1xx_hal_pwr.o" -MD)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
-I (..\Inc\stm32f1xx_hal_conf.h)(0x5F4F707F)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
 I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x5EBE6D2D)
@@ -412,7 +417,7 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x5EBE6D35)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c)(0x5EBE6D35)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/stm32f1xx_hal_flash.o" -MD)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
-I (..\Inc\stm32f1xx_hal_conf.h)(0x5F4F707F)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
 I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x5EBE6D2D)
@@ -439,7 +444,7 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x5EBE6D35)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c)(0x5EBE6D35)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/stm32f1xx_hal_flash_ex.o" -MD)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
-I (..\Inc\stm32f1xx_hal_conf.h)(0x5F4F707F)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
 I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x5EBE6D2D)
@@ -466,7 +471,7 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x5EBE6D35)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c)(0x5EBE6D35)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/stm32f1xx_hal_exti.o" -MD)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
-I (..\Inc\stm32f1xx_hal_conf.h)(0x5F4F707F)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
 I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x5EBE6D2D)
@@ -493,7 +498,7 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x5EBE6D35)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c)(0x5EBE6D35)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/stm32f1xx_hal_tim.o" -MD)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
-I (..\Inc\stm32f1xx_hal_conf.h)(0x5F4F707F)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
 I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x5EBE6D2D)
@@ -520,7 +525,7 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x5EBE6D35)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c)(0x5EBE6D35)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/stm32f1xx_hal_tim_ex.o" -MD)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
-I (..\Inc\stm32f1xx_hal_conf.h)(0x5F4F707F)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
 I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x5EBE6D2D)
@@ -557,7 +562,7 @@ I (D:\Software\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
 I (D:\Software\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
 I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\system_stm32f1xx.h)(0x5EBE6D2D)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
-I (..\Inc\stm32f1xx_hal_conf.h)(0x5F4F707F)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
 I (D:\Software\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5DDFFD72)
@@ -575,10 +580,10 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x5EBE6D35)
 F (..\UserCode\led\bmp.h)(0x544CF1FF)()
 F (..\UserCode\led\oled.c)(0x5F4DECF0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/oled.o" -MD)
 I (..\UserCode\led\oled.h)(0x5F4DEC49)
-I (..\Inc\i2c.h)(0x5F4F707F)
-I (..\Inc\main.h)(0x5F4F7080)
+I (..\Inc\i2c.h)(0x601BE053)
+I (..\Inc\main.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
-I (..\Inc\stm32f1xx_hal_conf.h)(0x5F4F707F)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
 I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x5EBE6D2D)
@@ -603,16 +608,17 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash_ex.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x5EBE6D35)
-I (..\UserCode\Usermain.h)(0x5F4F45FE)
+I (..\UserCode\Usermain.h)(0x601BE3C1)
 I (..\UserCode\esp8266\esp8266.h)(0x5F4F4A11)
-I (..\Inc\gpio.h)(0x5F4F707F)
+I (..\Inc\gpio.h)(0x601BE052)
+I (..\Inc\HumidifierControl.h)(0x601BE21F)
 I (..\UserCode\led\oledfont.h)(0x5F4DEFFB)
 F (..\UserCode\led\oled.h)(0x5F4DEC49)()
 F (..\UserCode\led\oledfont.h)(0x5F4DEFFB)()
-F (..\UserCode\Usermain.c)(0x5F4F4AF1)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/usermain.o" -MD)
-I (..\UserCode\Usermain.h)(0x5F4F45FE)
+F (..\UserCode\Usermain.c)(0x601BE3C1)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/usermain.o" -MD)
+I (..\UserCode\Usermain.h)(0x601BE3C1)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
-I (..\Inc\stm32f1xx_hal_conf.h)(0x5F4F707F)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
 I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x5EBE6D2D)
@@ -638,15 +644,16 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash_ex.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x5EBE6D35)
 I (..\UserCode\led\oled.h)(0x5F4DEC49)
-I (..\Inc\i2c.h)(0x5F4F707F)
-I (..\Inc\main.h)(0x5F4F7080)
+I (..\Inc\i2c.h)(0x601BE053)
+I (..\Inc\main.h)(0x601BE053)
 I (..\UserCode\esp8266\esp8266.h)(0x5F4F4A11)
-I (..\Inc\gpio.h)(0x5F4F707F)
-F (..\UserCode\Usermain.h)(0x5F4F45FE)()
+I (..\Inc\gpio.h)(0x601BE052)
+I (..\Inc\HumidifierControl.h)(0x601BE21F)
+F (..\UserCode\Usermain.h)(0x601BE3C1)()
 F (..\UserCode\esp8266\esp8266.c)(0x5F4F76A6)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/esp8266.o" -MD)
 I (..\UserCode\esp8266\esp8266.h)(0x5F4F4A11)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
-I (..\Inc\stm32f1xx_hal_conf.h)(0x5F4F707F)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
 I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x5EBE6D2D)
@@ -671,9 +678,44 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash_ex.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x5EBE6D35)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x5EBE6D35)
-I (..\Inc\gpio.h)(0x5F4F707F)
-I (..\Inc\main.h)(0x5F4F7080)
-I (..\UserCode\Usermain.h)(0x5F4F45FE)
+I (..\Inc\gpio.h)(0x601BE052)
+I (..\Inc\main.h)(0x601BE053)
+I (..\UserCode\Usermain.h)(0x601BE3C1)
 I (..\UserCode\led\oled.h)(0x5F4DEC49)
-I (..\Inc\i2c.h)(0x5F4F707F)
+I (..\Inc\i2c.h)(0x601BE053)
+I (..\Inc\HumidifierControl.h)(0x601BE21F)
 F (..\UserCode\esp8266\esp8266.h)(0x5F4F4A11)()
+F (..\Src\HumidifierControl.c)(0x601BE21F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../UserCode -I ../UserCode/led -I ../UserCode/sys -I ../UserCode/delay -I ../UserCode/esp8266-I./RTE/_Smart_humidifier-ID:/Software/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Software/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "smart humidifier/humidifiercontrol.o" -MD)
+I (..\Inc\HumidifierControl.h)(0x601BE21F)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x5EBE6D35)
+I (..\Inc\stm32f1xx_hal_conf.h)(0x601BE053)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x5EBE6D35)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x5EBE6D35)
+I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x5EBE6D2D)
+I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f103xb.h)(0x5EBE6D2D)
+I (..\Drivers\CMSIS\Include\core_cm3.h)(0x5EBE6D35)
+I (D:\Software\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5DDFFD72)
+I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x5EBE6D35)
+I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x5EBE6D35)
+I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x5EBE6D35)
+I (D:\Software\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (D:\Software\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\system_stm32f1xx.h)(0x5EBE6D2D)
+I (D:\Software\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5DDFFD72)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc_ex.h)(0x5EBE6D35)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio.h)(0x5EBE6D35)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio_ex.h)(0x5EBE6D35)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_exti.h)(0x5EBE6D35)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_dma.h)(0x5EBE6D35)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_dma_ex.h)(0x5EBE6D35)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_cortex.h)(0x5EBE6D35)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash.h)(0x5EBE6D35)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash_ex.h)(0x5EBE6D35)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x5EBE6D35)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x5EBE6D35)
+I (..\Inc\gpio.h)(0x601BE052)
+I (..\Inc\main.h)(0x601BE053)
+I (..\UserCode\Usermain.h)(0x601BE3C1)
+I (..\UserCode\led\oled.h)(0x5F4DEC49)
+I (..\Inc\i2c.h)(0x601BE053)
+I (..\UserCode\esp8266\esp8266.h)(0x5F4F4A11)

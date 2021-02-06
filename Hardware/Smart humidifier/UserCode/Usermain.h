@@ -4,7 +4,9 @@
 #include "stm32f1xx_hal.h"
 #include "oled.h"
 #include "esp8266.h"
+#include "HumidifierControl.h"
 
 void Usermain(void);
 void UserInit(void);
+
 #endif

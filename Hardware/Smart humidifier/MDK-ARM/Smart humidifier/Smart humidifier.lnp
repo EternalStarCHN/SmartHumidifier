@@ -23,6 +23,7 @@
 "smart humidifier\oled.o"
 "smart humidifier\usermain.o"
 "smart humidifier\esp8266.o"
+"smart humidifier\humidifiercontrol.o"
 --library_type=microlib --strict --scatter "Smart humidifier\Smart humidifier.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

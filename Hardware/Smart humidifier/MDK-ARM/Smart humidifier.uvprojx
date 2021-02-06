@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xB</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;   ../Drivers/STM32F1xx_HAL_Driver/Inc;   ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;   ../Drivers/CMSIS/Device/ST/STM32F1xx/Include;   ../Drivers/CMSIS/Include;   ..\UserCode;   ..\UserCode\led;   ..\UserCode\sys;   ..\UserCode\delay;   ..\UserCode\esp8266</IncludePath>
+              <IncludePath>../Inc;    ../Drivers/STM32F1xx_HAL_Driver/Inc;    ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;    ../Drivers/CMSIS/Device/ST/STM32F1xx/Include;    ../Drivers/CMSIS/Include;    ..\UserCode;    ..\UserCode\led;    ..\UserCode\sys;    ..\UserCode\delay;    ..\UserCode\esp8266</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -548,6 +548,11 @@
               <FileName>esp8266.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\UserCode\esp8266\esp8266.h</FilePath>
+            </File>
+            <File>
+              <FileName>HumidifierControl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\HumidifierControl.c</FilePath>
             </File>
           </Files>
         </Group>

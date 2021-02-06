@@ -1,6 +1,0 @@
-Added Component: Designator=L3(INDUCTOR Tripod)
-Add component. Clean all parameters for all variants
-Added Pin To Net: NetName=NetL2_2 Pin=L3-1
-Added Pin To Net: NetName=NetC25_1 Pin=L3-2
-Added Pin To Net: NetName=VCC5V Pin=L3-3
-Added Member To Class: ClassName=Smart Humidifier Member=Component L3 27uH:760uH

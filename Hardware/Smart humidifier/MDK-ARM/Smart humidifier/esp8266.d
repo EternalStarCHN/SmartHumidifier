@@ -27,4 +27,5 @@ smart\ humidifier/esp8266.o: ..\UserCode\esp8266\esp8266.c \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h ..\Inc\gpio.h \
   ..\Inc\main.h ..\UserCode\Usermain.h ..\UserCode\led\oled.h \
-  ..\Inc\i2c.h ..\UserCode\esp8266\esp8266.h
+  ..\Inc\i2c.h ..\UserCode\esp8266\esp8266.h ..\Inc\HumidifierControl.h \
+  ..\Inc\gpio.h

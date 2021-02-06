@@ -84,6 +84,10 @@ void Usermain(void)
 //		OLED_ShowStr(0, 7, "Blue", 1);//显示字符串		
 //		HAL_Delay(1000);//延时0.5s
 //		OLED_CLS();
+		Humidifier_On();
+		HAL_Delay(2000);
+		Humidifier_Off();
+		HAL_Delay(2000);
 	}
 }
 void UserInit(void)
