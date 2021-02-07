@@ -11,7 +11,7 @@
  3. 超声波加湿电路
  4. 传感器模块
  5. 显示屏模块
- 6. 网络模块\
+ 6. 网络模块  
  . . .
  
  主要介绍*1-3*部分
@@ -22,12 +22,13 @@
  ___
 
  ## 锂电池电源电路
- 该电路用于*单节3.7v锂电池*的充放电管理以及升压至5V
+ 该电路用于*单节3.7v锂电池*的充放电管理以及升压至5V  
  | 实现功能 | 所使用的芯片 |
- | :--------- | :-- |
+ | :--- | :--- |
  | 锂电池充放电管理 | TP4056芯片 | 
- | 3.7V锂电池升压至5V | TC6291C芯片 | 
- （👆这两部分也可以使用TP5400芯片一起实现，不过TP5400的电路有一个电解电容不方便放进外壳中，参考我的[LiTestPCB](https://github.com/eternalchn/LiTestPCB)仓库）
+ | 3.7V锂电池升压至5V | TC6291C芯片 |
+
+ （👆这两部分也可以使用TP5400芯片一起实现，不过TP5400的电路有一个电解电容不方便放进外壳中，参考我的[LiTestPCB](https://github.com/EternalStarCHN/LiTestPCB)仓库）  
 
  使用三极管制作了供电自动切换电路，实现了边充边放等功能
  * 在micro-usb口有外接电源时，VCC5V输出VBUS
@@ -38,7 +39,7 @@
  单片机程序使用**C语言**编写，调试烧录环境为**Keil5**，用于实现各个外设的正常工作以及加湿器的多种运行模式。
  ___
  ## ESP8266程序
- 加湿器与互联网之间的连接主要依靠[**巴法云**](https://github.com/eternalchn/Graduation-Design/blob/master/LICENSE)物联网平台，它拥有TCP设备云、TCP创客云、MQTT设备云和图云四种不同的协议。
+ 加湿器与互联网之间的连接主要依靠[**巴法云**](https://bemfa.com/)物联网平台，它拥有TCP设备云、TCP创客云、MQTT设备云和图云四种不同的协议。
 
  ESP8266的程序基于**arduino**进行开发，官网下载网址：`https://www.arduino.cc/en/Main/Software`
 
@@ -59,9 +60,9 @@ const int Con_Pin = 2;//模块联网状态(LOW:连接;HIGH:断开)
 ```
  ___
  ## APP程序
- 控制“聪明的加湿器”所使用的APP是基于**APP INVENTOR**编写的，国内网址：`http://app.gzjkw.net/`
- 
+ 控制“聪明的加湿器”所使用的APP是基于**APP INVENTOR**编写的，国内网址：`http://app.gzjkw.net/`  
  与ESP模块的代码相似，通过修改APP代码中的值即可实现与自己设备的连接。
 # 作者申明
+切勿用于个人专利申请和商业用途，谢谢！
 # 许可证
-Smart Humidifier (Graduation Design) is licensed under [MIT License](https://github.com/eternalchn/Graduation-Design/blob/master/LICENSE) .
+Smart Humidifier (Graduation Design) is licensed under [MIT License](https://github.com/EternalStarCHN/Graduation-Design/blob/master/LICENSE) .
