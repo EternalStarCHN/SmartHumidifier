@@ -6,5 +6,6 @@
 
 void Humidifier_On(void);
 void Humidifier_Off(void);
+void Humidifier_Play(void);
 
 #endif

@@ -20,7 +20,7 @@
 //WIFI密码
 #define DEFAULT_STAPSW   "yx990510"
 //用户私钥，可在控制台获取,修改为自己的UID
-#define UID  "da0217f36672b026825823e4dfc5ffca"
+#define UID  "b9e4ceb2c84ab8e8368d1a88e352540b"
 //主题名字，可在控制台新建
 #define TOPIC  "Humidifier003"
 //单片机引脚值
