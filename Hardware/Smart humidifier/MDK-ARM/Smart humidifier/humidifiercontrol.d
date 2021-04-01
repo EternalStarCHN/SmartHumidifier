@@ -22,9 +22,14 @@ smart\ humidifier/humidifiercontrol.o: ..\Src\HumidifierControl.c \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_dma.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_dma_ex.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_cortex.h \
+  ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_crc.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash_ex.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h \
-  ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h ..\Inc\gpio.h \
-  ..\Inc\main.h ..\UserCode\Usermain.h ..\UserCode\led\oled.h \
-  ..\Inc\i2c.h ..\UserCode\esp8266\esp8266.h ..\Inc\gpio.h
+  ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h \
+  ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h ..\Inc\gpio.h \
+  ..\Inc\main.h ..\UserCode\Usermain.h ..\Inc\usart.h \
+  D:\Software\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  ..\UserCode\OLED\oled.h ..\Inc\i2c.h ..\UserCode\ESP8266\esp8266.h \
+  ..\Inc\gpio.h ..\UserCode\BEEP\beep.h \
+  ..\UserCode\SHT30\sht30_i2c_drv.h ..\Inc\HumidifierControl.h

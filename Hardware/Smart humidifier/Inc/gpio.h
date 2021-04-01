@@ -28,7 +28,7 @@
 #include "main.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "HumidifierControl.h"
 /* USER CODE END Includes */
 
 /* USER CODE BEGIN Private defines */

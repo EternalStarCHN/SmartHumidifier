@@ -1,4 +1,4 @@
-smart\ humidifier/oled.o: ..\UserCode\led\oled.c ..\UserCode\led\oled.h \
+smart\ humidifier/oled.o: ..\UserCode\OLED\oled.c ..\UserCode\OLED\oled.h \
   ..\Inc\i2c.h ..\Inc\main.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h \
   ..\Inc\stm32f1xx_hal_conf.h \
@@ -22,10 +22,15 @@ smart\ humidifier/oled.o: ..\UserCode\led\oled.c ..\UserCode\led\oled.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_dma.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_dma_ex.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_cortex.h \
+  ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_crc.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash_ex.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h \
-  ..\UserCode\Usermain.h ..\UserCode\led\oled.h \
-  ..\UserCode\esp8266\esp8266.h ..\Inc\gpio.h ..\Inc\HumidifierControl.h \
-  ..\Inc\gpio.h ..\UserCode\led\oledfont.h ..\Inc\main.h
+  ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h \
+  ..\UserCode\Usermain.h ..\Inc\usart.h \
+  D:\Software\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  ..\UserCode\OLED\oled.h ..\UserCode\ESP8266\esp8266.h ..\Inc\gpio.h \
+  ..\Inc\HumidifierControl.h ..\Inc\gpio.h ..\UserCode\BEEP\beep.h \
+  ..\Inc\HumidifierControl.h ..\UserCode\SHT30\sht30_i2c_drv.h \
+  ..\UserCode\OLED\oledfont.h ..\UserCode\OLED\bmp.h

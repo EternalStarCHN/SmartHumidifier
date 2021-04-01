@@ -1,0 +1,73 @@
+Removed Pin From Net: NetName=PB12 Pin=K1-1
+Removed Pin From Net: NetName=VBUS Pin=USB1-1
+Change component parameters: Designator = "JK1"; Footprint = "HF46-xx-HS1"; UniqueID = "\EIEHDKBD"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "5V继电器"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Added Component: Designator=B1(BEEP 5x9x5.5)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C20(0603C)
+Add component. Clean all parameters for all variants
+Added Component: Designator=J1(Fe-HDR1X5/2.54-S)
+Add component. Clean all parameters for all variants
+Added Component: Designator=J5(Fe-HDR1X5/2.54-S)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Q3(SOT-23)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R36(0603R)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R37(0603R)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R38(0603R)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=VCC3V3 Pin=B1-1
+Added Pin To Net: NetName=GND Pin=C20-1
+Added Pin To Net: NetName=GND Pin=J1-1
+Added Pin To Net: NetName=GND Pin=J1-4
+Added Pin To Net: NetName=VCC3V3 Pin=J1-5
+Added Pin To Net: NetName=GND Pin=J5-3
+Added Pin To Net: NetName=VCC5V Pin=J5-4
+Added Pin To Net: NetName=GND Pin=Q3-E
+Added Pin To Net: NetName=PB12 Pin=R36-1
+Added Pin To Net: NetName=PB13 Pin=R37-2
+Added Pin To Net: NetName=PB13 Pin=R38-1
+Added Pin To Net: NetName=GND Pin=R38-2
+Added Pin To Net: NetName=VCC3V3 Pin=USB1-1
+Change Net Name : Old Net Name=PB6 New Net Name=PB6(I2C1_SCL)
+Change Net Name : Old Net Name=PB7 New Net Name=PB7(I2C1_SDA)
+Change Net Name : Old Net Name=VCC New Net Name=VCC_OLED
+Added Pin To Net: NetName=NetB1_2 Pin=B1-2
+Added Pin To Net: NetName=NetB1_2 Pin=Q3-C
+Added Net: Name=NetB1_2
+Added Pin To Net: NetName=NetC20_2 Pin=C20-2
+Added Pin To Net: NetName=NetC20_2 Pin=K1-1
+Added Pin To Net: NetName=NetC20_2 Pin=R36-2
+Added Net: Name=NetC20_2
+Added Pin To Net: NetName=NetQ3_B Pin=Q3-B
+Added Pin To Net: NetName=NetQ3_B Pin=R37-1
+Added Net: Name=NetQ3_B
+Added Pin To Net: NetName=PA9(USART1_TX) Pin=J5-2
+Added Pin To Net: NetName=PA9(USART1_TX) Pin=P4-15
+Added Pin To Net: NetName=PA9(USART1_TX) Pin=U3-30
+Added Net: Name=PA9(USART1_TX)
+Added Pin To Net: NetName=PA10(USART1_RX) Pin=J5-1
+Added Pin To Net: NetName=PA10(USART1_RX) Pin=P4-14
+Added Pin To Net: NetName=PA10(USART1_RX) Pin=U3-31
+Added Net: Name=PA10(USART1_RX)
+Added Pin To Net: NetName=PB10(I2C2_SCL) Pin=J1-3
+Added Pin To Net: NetName=PB10(I2C2_SCL) Pin=P3-15
+Added Pin To Net: NetName=PB10(I2C2_SCL) Pin=U3-21
+Added Net: Name=PB10(I2C2_SCL)
+Added Pin To Net: NetName=PB11(I2C2_SDA) Pin=J1-2
+Added Pin To Net: NetName=PB11(I2C2_SDA) Pin=P3-16
+Added Pin To Net: NetName=PB11(I2C2_SDA) Pin=U3-22
+Added Net: Name=PB11(I2C2_SDA)
+Added Member To Class: ClassName=Smart Humidifier Member=Component B1 BEEP
+Added Member To Class: ClassName=Smart Humidifier Member=Component C20 10nF/0603
+Added Member To Class: ClassName=Smart Humidifier Member=Component J1 Female HDR1X5
+Added Member To Class: ClassName=Smart Humidifier Member=Component J5 Female HDR1X5
+Added Member To Class: ClassName=Smart Humidifier Member=Component Q3 SS8050/NPN/SOT-23
+Added Member To Class: ClassName=Smart Humidifier Member=Component R36 10K/0603
+Added Member To Class: ClassName=Smart Humidifier Member=Component R37 4K7/0603
+Added Member To Class: ClassName=Smart Humidifier Member=Component R38 10K/0603

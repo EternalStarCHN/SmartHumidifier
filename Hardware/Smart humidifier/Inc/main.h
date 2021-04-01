@@ -58,12 +58,17 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define Humidifier_Control_Pin GPIO_PIN_0
-#define Humidifier_Control_GPIO_Port GPIOA
-#define Humidifier_State_Pin GPIO_PIN_4
-#define Humidifier_State_GPIO_Port GPIOB
-#define ESP8266_State_Pin GPIO_PIN_5
-#define ESP8266_State_GPIO_Port GPIOB
+#define KEY_MOD_Pin GPIO_PIN_12
+#define KEY_MOD_GPIO_Port GPIOB
+#define KEY_MOD_EXTI_IRQn EXTI15_10_IRQn
+#define BEEP_CON_Pin GPIO_PIN_13
+#define BEEP_CON_GPIO_Port GPIOB
+#define HUM_CON_Pin GPIO_PIN_14
+#define HUM_CON_GPIO_Port GPIOB
+#define HUM_STA_Pin GPIO_PIN_4
+#define HUM_STA_GPIO_Port GPIOB
+#define ESP8266_STA_Pin GPIO_PIN_5
+#define ESP8266_STA_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
