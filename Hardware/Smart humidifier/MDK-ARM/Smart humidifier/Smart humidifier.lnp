@@ -4,6 +4,7 @@
 "smart humidifier\gpio.o"
 "smart humidifier\crc.o"
 "smart humidifier\i2c.o"
+"smart humidifier\tim.o"
 "smart humidifier\usart.o"
 "smart humidifier\stm32f1xx_it.o"
 "smart humidifier\stm32f1xx_hal_msp.o"

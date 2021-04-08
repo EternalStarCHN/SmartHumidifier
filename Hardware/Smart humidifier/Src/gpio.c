@@ -20,7 +20,9 @@
 /* Includes ------------------------------------------------------------------*/
 #include "gpio.h"
 /* USER CODE BEGIN 0 */
+#include "Usermain.h"
 extern uint8_t Hum_Mod;
+extern uint8_t AntiBur_Flag;
 /* USER CODE END 0 */
 
 /*----------------------------------------------------------------------------*/
@@ -45,11 +47,21 @@ void MX_GPIO_Init(void)
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
-  __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(HUM_CON1_GPIO_Port, HUM_CON1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, BEEP_CON_Pin|HUM_CON_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin : PtPin */
+  GPIO_InitStruct.Pin = HUM_CON1_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(HUM_CON1_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PtPin */
   GPIO_InitStruct.Pin = KEY_MOD_Pin;
@@ -64,13 +76,22 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PBPin PBPin */
-  GPIO_InitStruct.Pin = HUM_STA_Pin|ESP8266_STA_Pin;
+  /*Configure GPIO pin : PtPin */
+  GPIO_InitStruct.Pin = HUM_STA_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(HUM_STA_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PtPin */
+  GPIO_InitStruct.Pin = ESP8266_STA_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  HAL_GPIO_Init(ESP8266_STA_GPIO_Port, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI4_IRQn, 2, 0);
+  HAL_NVIC_EnableIRQ(EXTI4_IRQn);
+
   HAL_NVIC_SetPriority(EXTI15_10_IRQn, 1, 0);
   HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 
@@ -79,14 +100,20 @@ void MX_GPIO_Init(void)
 /* USER CODE BEGIN 2 */
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
+	if( AntiBur_Flag ) AntiBur_Flag = 0;
     /* 判断哪个引脚触发了中�? */
     switch(GPIO_Pin)
     {
         case GPIO_PIN_12:
             //切换加湿器模�?
-			if( Hum_Mod >= 2 ) Hum_Mod = 0;
+			if( Hum_Mod >= Hum_Int ){
+				Hum_Mod = Hum_Stop;
+			}
 			else Hum_Mod++;
             break;
+		case GPIO_PIN_4:
+			if(!HAL_GPIO_ReadPin(HUM_STA_GPIO_Port,HUM_STA_Pin)) Hum_Mod = Hum_Run;
+			else if(HAL_GPIO_ReadPin(HUM_STA_GPIO_Port,HUM_STA_Pin)) Hum_Mod = Hum_Stop;				
         default:
             break;
     }

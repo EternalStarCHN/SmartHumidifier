@@ -203,12 +203,16 @@ void doWiFiTick(){
 //打开加湿器
 void turnOnLed(){
   //Serial.println("Turn ON");
+  digitalWrite(Hum_Pin,HIGH);
+  delay(50);
   digitalWrite(Hum_Pin,LOW);
 }
 
 //关闭加湿器
 void turnOffLed(){
   //Serial.println("Turn OFF");
+    digitalWrite(Hum_Pin,LOW);
+    delay(50);
     digitalWrite(Hum_Pin,HIGH);
 }
 

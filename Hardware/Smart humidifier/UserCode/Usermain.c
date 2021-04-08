@@ -4,29 +4,28 @@ extern char TEMP[45];
 extern char HUMI[45];
 extern unsigned char BMP1[];
 extern uint8_t Hum_Mod;
+extern uint8_t SHT30Update_Flag;
+extern uint8_t AntiBur_Flag;
 
 void Usermain(void)
 { 
 	UserInit();
 	while(1)
 	{	
-		Esp8266_StatusConfirm();
-		Humidifier_Play();
-        SHT30_Update();
-        OLED_Display();
-//		Humidifier_On();
-//		HAL_Delay(2000);
-//		Humidifier_Off();
-//		HAL_Delay(2000);
+		if( !AntiBur_Flag )User_Update();
+		else{
+			OLED_ShowString(12, 0, "Press any key", 12);
+			OLED_ShowString(20, 2, "to exit the ", 12);
+			OLED_ShowString(15, 4, "anti-burning", 12);	
+			OLED_ShowString(42, 6, "state", 12);
+			BEEP_Yell_Times(10, (uint8_t)500, (uint8_t)500);
+		}
 	}
 }
 
 void UserInit(void)
 {
         OLED_Init();
-		OLED_DrawBMP(0,0,128,8,BMP1);
-		HAL_Delay(300);
-		OLED_Clear();
 		Humidifier_Off();
         SHT30_Reset();
         if(SHT30_Init() == HAL_OK)
@@ -34,6 +33,9 @@ void UserInit(void)
         else
         printf("sht30 init fail.\n");
 		BEEP_Yell_Times(3, (uint8_t)500, (uint8_t)500);
+		OLED_DrawBMP(0,0,128,8,BMP1);
+		HAL_Delay(300);
+		OLED_Clear();
 }
 
 void OLED_Display(void){
@@ -65,6 +67,12 @@ void OLED_Display(void){
 	OLED_ShowNum(94, 4, Hum_Mod, 1, 16);
 }
 
+void User_Update(void){
+	Esp8266_StatusConfirm();
+	if( SHT30Update_Flag )SHT30_Update();	
+	OLED_Display();
+	Humidifier_Play();
+}
 #ifdef __GNUC__
 #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
 #else

@@ -10,8 +10,15 @@
 #include "HumidifierControl.h"
 #include "sht30_i2c_drv.h"
 
+enum Hum_Sta{ 
+	Hum_Stop = 0, 
+	Hum_Run = 1,
+	Hum_Int = 2
+};
+
 void Usermain(void);
 void UserInit(void);
 void OLED_Display(void);
+void User_Update(void);
 
 #endif

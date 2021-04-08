@@ -58,6 +58,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define HUM_CON1_Pin GPIO_PIN_0
+#define HUM_CON1_GPIO_Port GPIOA
 #define KEY_MOD_Pin GPIO_PIN_12
 #define KEY_MOD_GPIO_Port GPIOB
 #define KEY_MOD_EXTI_IRQn EXTI15_10_IRQn
@@ -67,6 +69,7 @@ void Error_Handler(void);
 #define HUM_CON_GPIO_Port GPIOB
 #define HUM_STA_Pin GPIO_PIN_4
 #define HUM_STA_GPIO_Port GPIOB
+#define HUM_STA_EXTI_IRQn EXTI4_IRQn
 #define ESP8266_STA_Pin GPIO_PIN_5
 #define ESP8266_STA_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */

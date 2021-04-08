@@ -1,6 +1,7 @@
 #include "sht30_i2c_drv.h"
 
 uint8_t recv_dat[6] = {0};
+uint8_t SHT30Update_Flag = 1;
 float temperature = 0.0;
 float humidity = 0.0;
 char TEMP[45] = {0};
@@ -127,4 +128,5 @@ void SHT30_Update(void){
     }  
 	sprintf(TEMP, "%.2f", temperature);
 	sprintf(HUMI, "%.2f", humidity);
+	SHT30Update_Flag = 0;
 }

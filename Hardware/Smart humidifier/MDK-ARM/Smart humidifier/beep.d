@@ -27,6 +27,8 @@ smart\ humidifier/beep.o: ..\UserCode\BEEP\beep.c ..\UserCode\BEEP\beep.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash_ex.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h \
+  ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim.h \
+  ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim_ex.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h \
   ..\UserCode\Usermain.h ..\Inc\usart.h \
   D:\Software\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
