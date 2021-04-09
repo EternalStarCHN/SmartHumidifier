@@ -104,8 +104,8 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* tim_baseHandle)
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* tim_baseHandle)
 {
     if(tim_baseHandle->Instance == htim2.Instance){
-		SHT30Update_Flag = 1;
-		if(!AntiBur_Flag){
+		SHT30Update_Flag = 1;						//SHT30温湿度传感器5秒更新一次
+		if(!AntiBur_Flag){							//防烧标志为0时计时2小时
 			Timer_Cnt++;
 			if(Timer_Cnt >= 1439){
 				AntiBur_Flag = 1;

@@ -70,8 +70,8 @@ void Error_Handler(void);
 #define HUM_STA_Pin GPIO_PIN_4
 #define HUM_STA_GPIO_Port GPIOB
 #define HUM_STA_EXTI_IRQn EXTI4_IRQn
-#define ESP8266_STA_Pin GPIO_PIN_5
-#define ESP8266_STA_GPIO_Port GPIOB
+#define ESP_STA_Pin GPIO_PIN_5
+#define ESP_STA_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

@@ -1,5 +1,4 @@
-smart\ humidifier/usermain.o: ..\UserCode\Usermain.c \
-  ..\UserCode\Usermain.h \
+smart\ humidifier/esp.o: ..\UserCode\ESP\esp.c ..\UserCode\ESP\esp.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h \
   ..\Inc\stm32f1xx_hal_conf.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h \
@@ -29,10 +28,9 @@ smart\ humidifier/usermain.o: ..\UserCode\Usermain.c \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim_ex.h \
-  ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h \
-  ..\Inc\usart.h ..\Inc\main.h ..\UserCode\Usermain.h \
+  ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h ..\Inc\gpio.h \
+  ..\Inc\main.h ..\UserCode\Usermain.h ..\Inc\usart.h \
   D:\Software\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   ..\UserCode\OLED\oled.h ..\Inc\i2c.h ..\UserCode\ESP\esp.h \
-  ..\Inc\gpio.h ..\Inc\HumidifierControl.h ..\Inc\gpio.h \
-  ..\UserCode\BEEP\beep.h ..\Inc\HumidifierControl.h \
-  ..\UserCode\SHT30\sht30_i2c_drv.h
+  ..\UserCode\BEEP\beep.h ..\Inc\HumidifierControl.h ..\Inc\gpio.h \
+  ..\UserCode\SHT30\sht30_i2c_drv.h ..\Inc\HumidifierControl.h

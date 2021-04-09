@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xB</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;            ../Drivers/STM32F1xx_HAL_Driver/Inc;            ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;            ../Drivers/CMSIS/Device/ST/STM32F1xx/Include;            ../Drivers/CMSIS/Include;            ..\UserCode;            ..\UserCode\BEEP;            ..\UserCode\DELAY;            ..\UserCode\ESP8266;            ..\UserCode\OLED;            ..\UserCode\SHT30;            ..\UserCode\SYS</IncludePath>
+              <IncludePath>../Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;..\UserCode;..\UserCode\BEEP;..\UserCode\DELAY;..\UserCode\OLED;..\UserCode\SHT30;..\UserCode\SYS;..\UserCode\ESP</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -545,16 +545,6 @@
               <FilePath>..\UserCode\Usermain.h</FilePath>
             </File>
             <File>
-              <FileName>esp8266.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\UserCode\esp8266\esp8266.c</FilePath>
-            </File>
-            <File>
-              <FileName>esp8266.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\UserCode\esp8266\esp8266.h</FilePath>
-            </File>
-            <File>
               <FileName>HumidifierControl.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\HumidifierControl.c</FilePath>
@@ -593,6 +583,16 @@
               <FileName>beep.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\UserCode\BEEP\beep.h</FilePath>
+            </File>
+            <File>
+              <FileName>esp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserCode\ESP\esp.c</FilePath>
+            </File>
+            <File>
+              <FileName>esp.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\UserCode\ESP\esp.h</FilePath>
             </File>
           </Files>
         </Group>

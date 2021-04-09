@@ -83,10 +83,10 @@ void MX_GPIO_Init(void)
   HAL_GPIO_Init(HUM_STA_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PtPin */
-  GPIO_InitStruct.Pin = ESP8266_STA_Pin;
+  GPIO_InitStruct.Pin = ESP_STA_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
-  HAL_GPIO_Init(ESP8266_STA_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(ESP_STA_GPIO_Port, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI4_IRQn, 2, 0);
@@ -100,20 +100,20 @@ void MX_GPIO_Init(void)
 /* USER CODE BEGIN 2 */
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-	if( AntiBur_Flag ) AntiBur_Flag = 0;
-    /* 判断哪个引脚触发了中�? */
-    switch(GPIO_Pin)
+	if( AntiBur_Flag ) AntiBur_Flag = 0;			//当触发外部中断时，清除防烧标志位
+    /* 判断哪个引脚触发了中断，并切换加湿模式*/
+    switch( GPIO_Pin )
     {
-        case GPIO_PIN_12:
-            //切换加湿器模�?
+        case GPIO_PIN_12:							//手动切换
 			if( Hum_Mod >= Hum_Int ){
 				Hum_Mod = Hum_Stop;
 			}
-			else Hum_Mod++;
-            break;
-		case GPIO_PIN_4:
-			if(!HAL_GPIO_ReadPin(HUM_STA_GPIO_Port,HUM_STA_Pin)) Hum_Mod = Hum_Run;
-			else if(HAL_GPIO_ReadPin(HUM_STA_GPIO_Port,HUM_STA_Pin)) Hum_Mod = Hum_Stop;				
+			else Hum_Mod ++;
+            break;			
+		case GPIO_PIN_4:							//联网切换
+			if( !HAL_GPIO_ReadPin(HUM_STA_GPIO_Port,HUM_STA_Pin) ) Hum_Mod = Hum_Run;
+			else if( HAL_GPIO_ReadPin(HUM_STA_GPIO_Port, HUM_STA_Pin) ) Hum_Mod = Hum_Stop;	
+			break;		
         default:
             break;
     }

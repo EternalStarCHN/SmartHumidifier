@@ -5,7 +5,7 @@
 #include "usart.h"
 #include "stdio.h"
 #include "oled.h"
-#include "esp8266.h"
+#include "esp.h"
 #include "beep.h"
 #include "HumidifierControl.h"
 #include "sht30_i2c_drv.h"

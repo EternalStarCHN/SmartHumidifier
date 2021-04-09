@@ -1,11 +1,16 @@
-#include "esp8266.h"
+#include "esp.h"
 
-uint8_t Esp_Sta = 0;
+uint8_t Esp_Sta = 0;								//Esp联网标志位
 
-void Esp8266_StatusConfirm(void)
+/**
+ * @brief	Esp状态检测
+ * @param 	无
+ * @note	用于更新Esp联网状态和加湿器联网控制状态
+*/
+void Esp_StatusConfirm(void)
 {
 	//检测WIFI连接状态(0：连接;1：断开)
-	if( HAL_GPIO_ReadPin(ESP8266_STA_GPIO_Port, ESP8266_STA_Pin) == RESET )
+	if( HAL_GPIO_ReadPin(ESP_STA_GPIO_Port, ESP_STA_Pin) == RESET )
 	{
 		OLED_ShowString(0, 0, "Online ", 12);
 		Esp_Sta = 1;

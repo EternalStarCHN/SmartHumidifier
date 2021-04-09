@@ -12,8 +12,8 @@ void Usermain(void)
 	UserInit();
 	while(1)
 	{	
-		if( !AntiBur_Flag )User_Update();
-		else{
+		if( !AntiBur_Flag )User_Update();							//如果防烧标志位为0，则正常运行。
+		else{														//如果防烧标志位为1，触发防烧警报。
 			OLED_ShowString(12, 0, "Press any key", 12);
 			OLED_ShowString(20, 2, "to exit the ", 12);
 			OLED_ShowString(15, 4, "anti-burning", 12);	
@@ -23,6 +23,11 @@ void Usermain(void)
 	}
 }
 
+/**
+ * @brief	加湿器初始化
+ * @param 	无
+ * @note	调整内部参数可调节声音和画面出现的顺序、蜂鸣器时间等
+*/
 void UserInit(void)
 {
         OLED_Init();
@@ -38,6 +43,11 @@ void UserInit(void)
 		OLED_Clear();
 }
 
+/**
+ * @brief	OLED屏幕显示函数
+ * @param 	无
+ * @note	调整内部参数可调节OLED屏幕显示样式
+*/
 void OLED_Display(void){
     OLED_ShowString(0, 1, "----------------", 12);
     OLED_ShowString(10, 2, "TEM:", 12);
@@ -67,28 +77,30 @@ void OLED_Display(void){
 	OLED_ShowNum(94, 4, Hum_Mod, 1, 16);
 }
 
+/**
+ * @brief	用户更新函数
+ * @param 	无
+ * @note	用于更新Esp、SHT30、OLED和加湿器状态
+*/
 void User_Update(void){
-	Esp8266_StatusConfirm();
+	Esp_StatusConfirm();
 	if( SHT30Update_Flag )SHT30_Update();	
 	OLED_Display();
 	Humidifier_Play();
 }
+
+/* printf重定向 */
 #ifdef __GNUC__
 #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
 #else
 #define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
 #endif 
-
-
-/* printf重定向 */
 int fputc(int ch,FILE *f)
 {
     uint8_t temp[1]={ch};
     HAL_UART_Transmit(&huart1,temp,1,10);        //UartHandle??????
   return ch;
 }
-
-
 PUTCHAR_PROTOTYPE
 {
  HAL_UART_Transmit(&huart1,(uint8_t*)&ch,1,10);

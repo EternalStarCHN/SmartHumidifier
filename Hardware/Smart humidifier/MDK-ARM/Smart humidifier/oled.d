@@ -32,7 +32,7 @@ smart\ humidifier/oled.o: ..\UserCode\OLED\oled.c ..\UserCode\OLED\oled.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h \
   ..\UserCode\Usermain.h ..\Inc\usart.h \
   D:\Software\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
-  ..\UserCode\OLED\oled.h ..\UserCode\ESP8266\esp8266.h ..\Inc\gpio.h \
+  ..\UserCode\OLED\oled.h ..\UserCode\ESP\esp.h ..\Inc\gpio.h \
   ..\Inc\HumidifierControl.h ..\Inc\gpio.h ..\UserCode\BEEP\beep.h \
   ..\Inc\HumidifierControl.h ..\UserCode\SHT30\sht30_i2c_drv.h \
   ..\UserCode\OLED\oledfont.h ..\UserCode\OLED\bmp.h
