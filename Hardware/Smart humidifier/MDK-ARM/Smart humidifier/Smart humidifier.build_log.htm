@@ -27,11 +27,15 @@ Project File Date:  04/09/2021
 <h2>Output:</h2>
 *** Using Compiler 'V6.14', folder: 'D:\Software\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'Smart humidifier'
-compiling esp.c...
+../UserCode/Usermain.c(93): warning: implicit declaration of function 'SHT30_Update' is invalid in C99 [-Wimplicit-function-declaration]
+        if( SHT30Update_Flag ) SHT30_Update();  
+                               ^
+1 warning generated.
+compiling Usermain.c...
 linking...
-Program Size: Code=13628 RO-data=2380 RW-data=1044 ZI-data=1452  
+Program Size: Code=13892 RO-data=2380 RW-data=1048 ZI-data=1448  
 FromELF: creating hex file...
-"Smart humidifier\Smart humidifier.axf" - 0 Error(s), 0 Warning(s).
+"Smart humidifier\Smart humidifier.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -54,7 +58,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.4.0
-Build Time Elapsed:  00:00:02
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

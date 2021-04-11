@@ -52,22 +52,28 @@ void OLED_Display(void){
     OLED_ShowString(0, 1, "----------------", 12);
     OLED_ShowString(10, 2, "TEM:", 12);
     OLED_ShowString(5, 3, TEMP, 16);
+	OLED_ShowString(45, 3, "`", 16);
     OLED_ShowString(10, 5, "HUM:", 12);
     OLED_ShowString(5, 6, HUMI, 16);
+    OLED_ShowString(45, 6, "%", 16);	
     OLED_ShowString(60, 2, "|", 16);
     OLED_ShowString(60, 4, "|", 16);
     OLED_ShowString(60, 6, "|", 16);
     OLED_ShowString(86, 2, "MOD:", 12);
 	switch(Hum_Mod){
-		case 0:
+		case Hum_Stop:
 			OLED_ShowString(78, 4, " ", 16);
 			OLED_ShowString(110, 4, ">", 16);
 			break;
-		case 1:
+		case Hum_Run:
 			OLED_ShowString(78, 4, "<", 16);
 			OLED_ShowString(110, 4, ">", 16);
 			break;
-		case 2:
+		case Hum_Int:
+			OLED_ShowString(78, 4, "<", 16);
+			OLED_ShowString(110, 4, ">", 16);
+			break;
+		case Hum_Auto:
 			OLED_ShowString(78, 4, "<", 16);
 			OLED_ShowString(110, 4, " ", 16);
 			break;
@@ -84,7 +90,7 @@ void OLED_Display(void){
 */
 void User_Update(void){
 	Esp_StatusConfirm();
-	if( SHT30Update_Flag )SHT30_Update();	
+	if( SHT30Update_Flag ) SHT30_Update();	
 	OLED_Display();
 	Humidifier_Play();
 }

@@ -13,7 +13,8 @@
 enum Hum_Sta{ 
 	Hum_Stop = 0, 
 	Hum_Run = 1,
-	Hum_Int = 2
+	Hum_Int = 2,
+	Hum_Auto = 3
 };
 
 void Usermain(void);

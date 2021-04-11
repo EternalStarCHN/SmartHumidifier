@@ -105,7 +105,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
     switch( GPIO_Pin )
     {
         case GPIO_PIN_12:							//手动切换
-			if( Hum_Mod >= Hum_Int ){
+			if( Hum_Mod >= Hum_Auto ){
 				Hum_Mod = Hum_Stop;
 			}
 			else Hum_Mod ++;
