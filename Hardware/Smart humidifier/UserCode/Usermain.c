@@ -37,7 +37,7 @@ void UserInit(void)
         printf("sht30 init ok.\n");
         else
         printf("sht30 init fail.\n");
-		BEEP_Yell_Times(3, (uint8_t)500, (uint8_t)500);
+		BEEP_Yell_Times(3, (uint8_t)200, (uint8_t)200);
 		OLED_DrawBMP(0,0,128,8,BMP1);
 		HAL_Delay(300);
 		OLED_Clear();

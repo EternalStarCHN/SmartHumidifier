@@ -6,10 +6,10 @@ float Humidity_Set = 65;
 extern float humidity;
 
 void Humidifier_On(void){
-	HAL_GPIO_WritePin(HUM_CON1_GPIO_Port, HUM_CON1_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(HUM_CON_GPIO_Port, HUM_CON_Pin, GPIO_PIN_SET);
 }
 void Humidifier_Off(void){
-	HAL_GPIO_WritePin(HUM_CON1_GPIO_Port, HUM_CON1_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(HUM_CON_GPIO_Port, HUM_CON_Pin, GPIO_PIN_RESET);
 }
 void Humidifier_Play(void){
 	if( Hum_Mod == 1 )

@@ -157,9 +157,9 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>103</LineNumber>
+          <LineNumber>115</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134220382</Address>
+          <Address>134220454</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -168,14 +168,30 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>../Src/gpio.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Smart_humidifier\../Src/gpio.c\103</Expression>
+          <Expression>\\Smart_humidifier\../Src/gpio.c\115</Expression>
+        </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>108</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134220430</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>../Src/gpio.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\Smart_humidifier\../Src/gpio.c\108</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
         <Ww>
           <count>0</count>
           <WinNumber>1</WinNumber>
-          <ItemText>AntiBur_Flag</ItemText>
+          <ItemText>Hum_Mod</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>
