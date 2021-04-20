@@ -60,6 +60,7 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define KEY_MOD_Pin GPIO_PIN_12
 #define KEY_MOD_GPIO_Port GPIOB
+#define KEY_MOD_EXTI_IRQn EXTI15_10_IRQn
 #define BEEP_CON_Pin GPIO_PIN_13
 #define BEEP_CON_GPIO_Port GPIOB
 #define HUM_CON_Pin GPIO_PIN_14

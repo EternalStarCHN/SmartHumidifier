@@ -138,9 +138,9 @@ void doTCPClientTick(){
     Serial.println("Buff");
     Serial.println(TcpClient_Buff);
     if((TcpClient_Buff.indexOf("&msg=on") > 0)) {
-      turnOnLed();
+      turnOnHum();
     }else if((TcpClient_Buff.indexOf("&msg=off") > 0)) {
-      turnOffLed();
+      turnOffHum();
     }
    TcpClient_Buff="";
    TcpClient_BuffIndex = 0;
@@ -201,7 +201,7 @@ void doWiFiTick(){
 }
 
 //打开加湿器
-void turnOnLed(){
+void turnOnHum(){
   //Serial.println("Turn ON");
   digitalWrite(Hum_Pin,HIGH);
   delay(50);
@@ -209,7 +209,7 @@ void turnOnLed(){
 }
 
 //关闭加湿器
-void turnOffLed(){
+void turnOffHum(){
   //Serial.println("Turn OFF");
     digitalWrite(Hum_Pin,LOW);
     delay(50);

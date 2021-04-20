@@ -82,27 +82,49 @@ void MX_GPIO_Init(void)
   HAL_NVIC_SetPriority(EXTI4_IRQn, 2, 0);
   HAL_NVIC_EnableIRQ(EXTI4_IRQn);
 
+  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 1, 0);
+  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
+
 }
 
 /* USER CODE BEGIN 2 */
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-	if( AntiBur_Flag ) AntiBur_Flag = 0;			//å½“è§¦å‘å¤–éƒ¨ä¸­æ–­æ—¶ï¼Œæ¸…é™¤é˜²çƒ§æ ‡å¿—ä½
-    /* åˆ¤æ–­å“ªä¸ªå¼•è„šè§¦å‘äº†ä¸­æ–­ï¼Œå¹¶åˆ‡æ¢åŠ æ¹¿æ¨¡å¼?*/
+	if( AntiBur_Flag ) AntiBur_Flag = 0;			//ÅÐ¶ÏÊÇ·ñÎª·ÀÉÕÄ£Ê½
+    /* ÅÐ¶Ï°´¼ü»òesp¿ØÖÆ*/
+//	if( HAL_GPIO_ReadPin(KEY_MOD_GPIO_Port, KEY_MOD_Pin) == GPIO_PIN_RESET ){
+//		HAL_Delay(100);
+//		if( HAL_GPIO_ReadPin(KEY_MOD_GPIO_Port, KEY_MOD_Pin) == GPIO_PIN_RESET ){
+//			if( Hum_Mod >= Hum_Auto ){
+//				Hum_Mod = Hum_Stop;
+//			}
+//			else Hum_Mod ++;
+//		}
+//	}
+//	
+//	if( HAL_GPIO_ReadPin(ESP_STA_GPIO_Port, ESP_STA_Pin) == GPIO_PIN_RESET ){
+//		HAL_Delay(100);
+//		if( HAL_GPIO_ReadPin(ESP_STA_GPIO_Port, ESP_STA_Pin) == GPIO_PIN_RESET ){
+//			if( Hum_Mod >= Hum_Auto ){
+//				Hum_Mod = Hum_Stop;
+//			}
+//			else Hum_Mod ++;
+//		}
+//	}
     switch( GPIO_Pin )
     {
-        case GPIO_PIN_12:							//æ‰‹åŠ¨åˆ‡æ¢
-			if( Hum_Mod >= Hum_Auto ){
-				Hum_Mod = Hum_Stop;
-			}
-			else Hum_Mod ++;
-            break;			
-		case GPIO_PIN_4:							//è”ç½‘åˆ‡æ¢
-			if( !HAL_GPIO_ReadPin(HUM_STA_GPIO_Port,HUM_STA_Pin) ) Hum_Mod = Hum_Run;
-			else if( HAL_GPIO_ReadPin(HUM_STA_GPIO_Port, HUM_STA_Pin) ) Hum_Mod = Hum_Stop;	
-			break;		
-        default:
-            break;
+			case GPIO_PIN_12:										//°´¼ü°´ÏÂ
+				if( Hum_Mod >= Hum_Auto ){
+					Hum_Mod = Hum_Stop;
+				}
+				else Hum_Mod ++;
+				break;			
+			case GPIO_PIN_4:												//esp¿ØÖÆ
+				if( !HAL_GPIO_ReadPin(HUM_STA_GPIO_Port,HUM_STA_Pin) ) Hum_Mod = Hum_Run;
+				else if( HAL_GPIO_ReadPin(HUM_STA_GPIO_Port, HUM_STA_Pin) ) Hum_Mod = Hum_Stop;	
+				break;		
+			default:
+				break;
     }
 }
 /* USER CODE END 2 */

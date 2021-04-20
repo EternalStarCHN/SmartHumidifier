@@ -10,7 +10,7 @@ char HUMI[45] = {0};
 /**
  * @brief    向SHT30发送一条指令(16bit)
  * @param    cmd —— SHT30指令（在SHT30_MODE中枚举定义）
- * @retval    成功返回HAL_OK
+ * @retval   成功返回HAL_OK
 */
 static uint8_t SHT30_Send_Cmd(SHT30_CMD cmd)
 {
@@ -23,7 +23,7 @@ static uint8_t SHT30_Send_Cmd(SHT30_CMD cmd)
 /**
  * @brief    复位SHT30
  * @param    none
- * @retval    none
+ * @retval   none
 */
 void SHT30_Reset(void)
 {

@@ -14,9 +14,9 @@
 //[7]0 1 2 3 ... 127 			   
 
 /**
- * @brief	OLED写入命令
- * @param cmd - 待写入命令
- * @note	移植时请使用自己的底层API实现
+* @brief    OLED写入命令
+* @param    cmd - 待写入命令
+* @note     移植时请使用自己的底层API实现
 */
 static void OLED_Write_Cmd(uint8_t cmd)
 {
@@ -28,9 +28,9 @@ static void OLED_Write_Cmd(uint8_t cmd)
 	HAL_I2C_Master_Transmit(&hi2c1, 0x78, buf, 2, 0xFFFF);
 }
 /**
- * @brief	OLED写入数据
- * @param cmd - 待写入数据
- * @note	移植时请使用自己的底层API实现
+* @brief    OLED写入数据
+* @param    cmd - 待写入数据
+* @note     移植时请使用自己的底层API实现
 */
 static void OLED_Write_Dat(uint8_t dat)
 {
@@ -43,9 +43,9 @@ static void OLED_Write_Dat(uint8_t dat)
 }
 
 /**
-* @brief	OLED设置显示位置
- * @param x - X方向位置
- * @param y - Y方向位置
+* @brief    OLED设置显示位置
+* @param    x - X方向位置
+* @param    y - Y方向位置
 */
 void OLED_Set_Pos(uint8_t x, uint8_t y)
 { 	
@@ -54,7 +54,7 @@ void OLED_Set_Pos(uint8_t x, uint8_t y)
 	OLED_Write_Cmd((x&0x0f)|0x01);
 }   	  
 /**
-* @brief	OLED开启显示
+* @brief    OLED开启显示
 */ 
 void OLED_Display_On(void)
 {
@@ -63,7 +63,7 @@ void OLED_Display_On(void)
 	OLED_Write_Cmd(0XAF);  //DISPLAY ON
 }
 /**
-* @brief	OLED关闭显示
+* @brief    OLED关闭显示
 */   
 void OLED_Display_Off(void)
 {
@@ -72,7 +72,7 @@ void OLED_Display_Off(void)
 	OLED_Write_Cmd(0XAE);  //DISPLAY OFF
 }		   			 
 /**
- * @brief	OLED清屏函数（清屏后全黑）
+* @brief    OLED清屏函数（清屏后全黑）
 */ 
 void OLED_Clear(void)
 {  
@@ -89,7 +89,7 @@ void OLED_Clear(void)
 	}
 }
 /**
-* @brief	OLED显示全开（所有像素点全亮）
+* @brief    OLED显示全开（所有像素点全亮）
 */
 void OLED_On(void)
 {  
@@ -106,12 +106,12 @@ void OLED_On(void)
 	}
 }
 /**
-* @brief	在指定位置显示一个ASCII字符
- * @param x - 0 - 127
- * @param y - 0 - 7
-* @param chr  - 待显示的ASCII字符
- * @param size - ASCII字符大小
- * 				字符大小有12(6*8)/16(8*16)两种大小
+* @brief    在指定位置显示一个ASCII字符
+* @param    x - 0 - 127
+* @param    y - 0 - 7
+* @param    chr  - 待显示的ASCII字符
+* @param    size - ASCII字符大小
+* 				  字符大小有12(6*8)/16(8*16)两种大小
 */
 void OLED_ShowChar(uint8_t x,uint8_t y,uint8_t chr,uint8_t size)
 {   
@@ -147,9 +147,9 @@ void OLED_ShowChar(uint8_t x,uint8_t y,uint8_t chr,uint8_t size)
 	}
 }
 /**
- * @brief	OLED 专用pow函数
- * @param m - 底数
- * @param n - 指数
+* @brief    OLED 专用pow函数
+* @param    m - 底数
+* @param    n - 指数
 */
 static uint32_t oled_pow(uint8_t m,uint8_t n)
 {
@@ -158,13 +158,13 @@ static uint32_t oled_pow(uint8_t m,uint8_t n)
 	return result;
 }	
 /**
-* @brief	在指定位置显示一个整数
- * @param x - 0 - 127
- * @param y - 0 - 7
-* @param num - 待显示的整数(0-4294967295)
- * @param	len - 数字的位数 
- * @param size - ASCII字符大小
- * 				字符大小有12(6*8)/16(8*16)两种大小
+* @brief    在指定位置显示一个整数
+* @param    x - 0 - 127
+* @param    y - 0 - 7
+* @param    num - 待显示的整数(0-4294967295)
+* @param    len - 数字的位数 
+* @param    size - ASCII字符大小
+* 				  字符大小有12(6*8)/16(8*16)两种大小
 */
 void OLED_ShowNum(uint8_t x,uint8_t y,uint32_t num,uint8_t len,uint8_t size)
 {         	
@@ -186,12 +186,12 @@ void OLED_ShowNum(uint8_t x,uint8_t y,uint32_t num,uint8_t len,uint8_t size)
 	}
 } 
 /**
-* @brief	在指定位置显示一个字符串
- * @param x - 0 - 127
- * @param y - 0 - 7
-* @param chr - 待显示的字符串指针
- * @param size - ASCII字符大小
- * 				字符大小有12(6*8)/16(8*16)两种大小
+* @brief    在指定位置显示一个字符串
+* @param    x - 0 - 127
+* @param    y - 0 - 7
+* @param    chr - 待显示的字符串指针
+* @param    size - ASCII字符大小
+* 				  字符大小有12(6*8)/16(8*16)两种大小
 */
 void OLED_ShowString(uint8_t x,uint8_t y,char *chr,uint8_t size)
 {
@@ -204,11 +204,11 @@ void OLED_ShowString(uint8_t x,uint8_t y,char *chr,uint8_t size)
 	}
 }
 /**
- * @brief	在指定位置显示一个汉字
- * @param x  - 0 - 127
- * @param y  - 0 - 7
- * @param no - 汉字在中文字库数组中的索引（下标）
- * @note	中文字库在oledfont.h文件中的Hzk数组中，需要提前使用软件对汉字取模
+* @brief    在指定位置显示一个汉字
+* @param    x  - 0 - 127
+* @param    y  - 0 - 7
+* @param    no - 汉字在中文字库数组中的索引（下标）
+* @note     中文字库在oledfont.h文件中的Hzk数组中，需要提前使用软件对汉字取模
 */
 void OLED_ShowCHinese(uint8_t x,uint8_t y,uint8_t no)
 {      			    
@@ -227,11 +227,11 @@ void OLED_ShowCHinese(uint8_t x,uint8_t y,uint8_t no)
       }					
 }
 /**
-* @brief	在指定位置显示一幅图片
- * @param x1,x2  - 0 - 127
-* @param y1,y2  - 0 - 7（8表示全屏显示）
- * @param BMP - 图片数组地址
- * @note	图像数组BMP存放在bmp.h文件中
+* @brief    在指定位置显示一幅图片
+* @param    x1,x2  - 0 - 127
+* @param    y1,y2  - 0 - 7（8表示全屏显示）
+* @param    BMP - 图片数组地址
+* @note     图像数组BMP存放在bmp.h文件中
 */
 void OLED_DrawBMP(uint8_t x0, uint8_t y0,uint8_t x1, uint8_t y1,uint8_t BMP[])
 { 	
@@ -257,7 +257,7 @@ void OLED_DrawBMP(uint8_t x0, uint8_t y0,uint8_t x1, uint8_t y1,uint8_t BMP[])
 } 
 
 /**
- * @brief	OLED初始化
+* @brief    OLED初始化
 */			    
 void OLED_Init(void)
 { 	
