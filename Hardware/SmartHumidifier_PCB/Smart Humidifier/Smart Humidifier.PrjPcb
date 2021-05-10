@@ -109,6 +109,10 @@ DocumentUniqueId=OEHALCYG
 DocumentPath=Project Outputs for Smart Humidifier\Design Rule Check - Smart Humidifier.html
 DItemRevisionGUID=
 
+[GeneratedDocument2]
+DocumentPath=Project Outputs for Smart Humidifier\Design Rule Check - Smart Humidifier_LCEDA.html
+DItemRevisionGUID=
+
 [Configuration1]
 Name=Sources
 ParameterCount=0
