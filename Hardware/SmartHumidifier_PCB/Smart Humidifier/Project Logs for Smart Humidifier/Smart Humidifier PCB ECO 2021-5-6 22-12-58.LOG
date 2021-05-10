@@ -1,0 +1,128 @@
+Removed Pin From Net: NetName=GND Pin=C9-1
+Removed Pin From Net: NetName=GND Pin=C11-1
+Removed Pin From Net: NetName=GND Pin=C15-1
+Removed Pin From Net: NetName=VCC_OLED Pin=C15-2
+Removed Pin From Net: NetName=VCC_OLED Pin=C17-2
+Removed Pin From Net: NetName=GND Pin=OLED1-1
+Removed Pin From Net: NetName=NetC10_2 Pin=OLED1-2
+Removed Pin From Net: NetName=NetC10_1 Pin=OLED1-3
+Removed Pin From Net: NetName=VCC_OLED Pin=OLED1-6
+Removed Pin From Net: NetName=GND Pin=OLED1-7
+Removed Pin From Net: NetName=GND Pin=OLED1-8
+Removed Pin From Net: NetName=VCC_OLED Pin=OLED1-9
+Removed Pin From Net: NetName=GND Pin=OLED1-12
+Removed Pin From Net: NetName=GND Pin=OLED1-13
+Removed Pin From Net: NetName=VCC_OLED Pin=OLED1-14
+Removed Pin From Net: NetName=GND Pin=OLED1-15
+Removed Pin From Net: NetName=GND Pin=OLED1-16
+Removed Pin From Net: NetName=GND Pin=OLED1-17
+Removed Pin From Net: NetName=PB6(I2C1_SCL) Pin=OLED1-18
+Removed Pin From Net: NetName=PB7(I2C1_SDA) Pin=OLED1-19
+Removed Pin From Net: NetName=GND Pin=OLED1-21
+Removed Pin From Net: NetName=GND Pin=OLED1-22
+Removed Pin From Net: NetName=GND Pin=OLED1-23
+Removed Pin From Net: NetName=GND Pin=OLED1-24
+Removed Pin From Net: NetName=GND Pin=OLED1-25
+Removed Pin From Net: NetName=NetC9_2 Pin=OLED1-28
+Removed Pin From Net: NetName=GND Pin=OLED1-29
+Removed Pin From Net: NetName=GND Pin=OLED1-30
+Removed Pin From Net: NetName=GND Pin=R10-1
+Removed Pin From Net: NetName=VCC_OLED Pin=R11-2
+Removed Pin From Net: NetName=GND Pin=R14-1
+Removed Pin From Net: NetName=VCC_OLED Pin=R15-2
+Removed Pin From Net: NetName=GND Pin=R17-1
+Removed Pin From Net: NetName=PB6(I2C1_SCL) Pin=R32-1
+Removed Pin From Net: NetName=VCC_OLED Pin=R32-2
+Removed Pin From Net: NetName=PB7(I2C1_SDA) Pin=R33-1
+Removed Pin From Net: NetName=VCC_OLED Pin=R33-2
+Removed Pin From Net: NetName=PB7(I2C1_SDA) Pin=R34-2
+Removed Member From Class: ClassName=Smart Humidifier Member=OLED1
+Removed Member From Class: ClassName=Smart Humidifier Member=R33
+Removed Member From Class: ClassName=Smart Humidifier Member=R34
+Change Component Footprint: Designator=R11 Old Footprint=0603R New Footprint=SW_0603R
+Change Component Footprint: Designator=D9 Old Footprint=SOD-523 New Footprint=SOD-123
+Change Component Comment : Designator=R14 Old Comment=1K/0603 New Comment=0R/0603
+Change Component Comment : Designator=R11 Old Comment=1K/0603 New Comment=4.7K/0603
+Change Component Comment : Designator=R15 Old Comment=1K/0603 New Comment=4.7K/0603
+Change Component Comment : Designator=R17 Old Comment=1K/0603 New Comment=4.7K/0603
+Change Component Comment : Designator=C15 Old Comment=1uF/0603 New Comment=4.7uF/0603
+Change Component Comment : Designator=C17 Old Comment=1uF/0603 New Comment=4.7uF/0603
+Change Component Comment : Designator=C9 Old Comment=2.2uF/0603 New Comment=1uF/0603
+Change Component Comment : Designator=C11 Old Comment=4.7uF/0603 New Comment=1uF/0603
+Change Component Comment : Designator=R32 Old Comment=4K7/0603 New Comment=620K/0603
+Change Component Comment : Designator=R10 Old Comment=910K/0603 New Comment=4.7K/0603
+Change Component Comment : Designator=D9 Old Comment=IN4148 New Comment=IN4148W/T4
+Change component parameters: Designator = "JK1"; Footprint = "HF46-xx-HS1"; UniqueID = "\EIEHDKBD"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "5V继电器"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Added Component: Designator=C34(0603C)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D6(SOD-123)
+Add component. Clean all parameters for all variants
+Added Component: Designator=J6(FPC0.5-30P)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=VCC_OLED Pin=C11-1
+Added Pin To Net: NetName=GND Pin=C11-2
+Added Pin To Net: NetName=VCC_OLED Pin=C12-1
+Added Pin To Net: NetName=GND Pin=C12-2
+Added Pin To Net: NetName=GND Pin=C15-2
+Added Pin To Net: NetName=GND Pin=C34-1
+Added Pin To Net: NetName=VCC_OLED Pin=D6-K
+Added Pin To Net: NetName=GND Pin=J6-1
+Added Pin To Net: NetName=NetC9_2 Pin=J6-2
+Added Pin To Net: NetName=NetC10_2 Pin=J6-4
+Added Pin To Net: NetName=NetC10_1 Pin=J6-5
+Added Pin To Net: NetName=VCC_OLED Pin=J6-6
+Added Pin To Net: NetName=GND Pin=J6-8
+Added Pin To Net: NetName=VCC_OLED Pin=J6-9
+Added Pin To Net: NetName=GND Pin=J6-10
+Added Pin To Net: NetName=VCC_OLED Pin=J6-11
+Added Pin To Net: NetName=GND Pin=J6-12
+Added Pin To Net: NetName=GND Pin=J6-13
+Added Pin To Net: NetName=GND Pin=J6-16
+Added Pin To Net: NetName=GND Pin=J6-17
+Added Pin To Net: NetName=PB6(I2C1_SCL) Pin=J6-18
+Added Pin To Net: NetName=PB7(I2C1_SDA) Pin=J6-19
+Added Pin To Net: NetName=PB7(I2C1_SDA) Pin=J6-20
+Added Pin To Net: NetName=GND Pin=J6-21
+Added Pin To Net: NetName=GND Pin=J6-22
+Added Pin To Net: NetName=GND Pin=J6-23
+Added Pin To Net: NetName=GND Pin=J6-24
+Added Pin To Net: NetName=GND Pin=J6-25
+Added Pin To Net: NetName=GND Pin=J6-29
+Added Pin To Net: NetName=GND Pin=J6-30
+Added Pin To Net: NetName=VCC_OLED Pin=R10-2
+Added Pin To Net: NetName=VCC_OLED Pin=R11-1
+Added Pin To Net: NetName=GND Pin=R11-3
+Added Pin To Net: NetName=VCC_OLED Pin=R14-1
+Added Pin To Net: NetName=VCC3V3 Pin=R14-2
+Added Pin To Net: NetName=VCC_OLED Pin=R15-1
+Added Pin To Net: NetName=PB7(I2C1_SDA) Pin=R15-2
+Added Pin To Net: NetName=VCC_OLED Pin=R17-1
+Added Pin To Net: NetName=PB6(I2C1_SCL) Pin=R17-2
+Added Pin To Net: NetName=GND Pin=R32-1
+Added Pin To Net: NetName=NetC9_1 Pin=C9-1
+Added Pin To Net: NetName=NetC9_1 Pin=J6-3
+Added Net: Name=NetC9_1
+Added Pin To Net: NetName=NetC15_1 Pin=C15-1
+Added Pin To Net: NetName=NetC15_1 Pin=D6-A
+Added Pin To Net: NetName=NetC15_1 Pin=J6-14
+Added Pin To Net: NetName=NetC15_1 Pin=R10-1
+Added Net: Name=NetC15_1
+Added Pin To Net: NetName=NetC17_2 Pin=C17-2
+Added Pin To Net: NetName=NetC17_2 Pin=J6-27
+Added Net: Name=NetC17_2
+Added Pin To Net: NetName=NetC34_2 Pin=C34-2
+Added Pin To Net: NetName=NetC34_2 Pin=J6-28
+Added Net: Name=NetC34_2
+Added Pin To Net: NetName=NetJ6_15 Pin=J6-15
+Added Pin To Net: NetName=NetJ6_15 Pin=R11-2
+Added Net: Name=NetJ6_15
+Added Pin To Net: NetName=NetJ6_26 Pin=J6-26
+Added Pin To Net: NetName=NetJ6_26 Pin=R32-2
+Added Net: Name=NetJ6_26
+Added Member To Class: ClassName=Smart Humidifier Member=Component C34 2.2uF/0603
+Added Member To Class: ClassName=Smart Humidifier Member=Component D6 1N4148W/T4
+Added Member To Class: ClassName=Smart Humidifier Member=Component J6 FPC0.5-30P

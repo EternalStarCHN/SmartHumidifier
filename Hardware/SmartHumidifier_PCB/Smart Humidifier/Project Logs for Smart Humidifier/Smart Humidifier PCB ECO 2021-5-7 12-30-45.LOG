@@ -1,0 +1,84 @@
+Removed Pin From Net: NetName=GND Pin=C20-1
+Removed Pin From Net: NetName=GND Pin=J6-0
+Removed Pin From Net: NetName=GND Pin=J6-0
+Removed Pin From Net: NetName=PB12 Pin=R36-1
+Removed Member From Class: ClassName=Smart Humidifier Member=C34
+Removed Member From Class: ClassName=Smart Humidifier Member=R36
+Removed Member From Class: ClassName=Smart Humidifier Member=R37
+Removed Member From Class: ClassName=Smart Humidifier Member=R38
+Change Component Designator: OldDesignator=C4 NewDesignator=C6
+Change Component Designator: OldDesignator=C5 NewDesignator=C7
+Change Component Designator: OldDesignator=C6 NewDesignator=C4
+Change Component Designator: OldDesignator=C7 NewDesignator=C9
+Change Component Designator: OldDesignator=C8 NewDesignator=C10
+Change Component Designator: OldDesignator=C9 NewDesignator=C5
+Change Component Designator: OldDesignator=C10 NewDesignator=C8
+Change Component Designator: OldDesignator=C16 NewDesignator=C17
+Change Component Designator: OldDesignator=C17 NewDesignator=C16
+Change Component Designator: OldDesignator=C18 NewDesignator=C19
+Change Component Designator: OldDesignator=C19 NewDesignator=C20
+Change Component Designator: OldDesignator=C34 NewDesignator=C18
+Change Component Designator: OldDesignator=D8 NewDesignator=D9
+Change Component Designator: OldDesignator=D9 NewDesignator=D8
+Change Component Designator: OldDesignator=J1 NewDesignator=J4
+Change Component Designator: OldDesignator=J2 NewDesignator=J1
+Change Component Designator: OldDesignator=J4 NewDesignator=J5
+Change Component Designator: OldDesignator=J5 NewDesignator=J6
+Change Component Designator: OldDesignator=J6 NewDesignator=J2
+Change Component Designator: OldDesignator=R4 NewDesignator=R5
+Change Component Designator: OldDesignator=R5 NewDesignator=R7
+Change Component Designator: OldDesignator=R6 NewDesignator=R8
+Change Component Designator: OldDesignator=R7 NewDesignator=R9
+Change Component Designator: OldDesignator=R8 NewDesignator=R10
+Change Component Designator: OldDesignator=R9 NewDesignator=R11
+Change Component Designator: OldDesignator=R10 NewDesignator=R12
+Change Component Designator: OldDesignator=R11 NewDesignator=R14
+Change Component Designator: OldDesignator=R12 NewDesignator=R13
+Change Component Designator: OldDesignator=R13 NewDesignator=R15
+Change Component Designator: OldDesignator=R14 NewDesignator=R16
+Change Component Designator: OldDesignator=R15 NewDesignator=R17
+Change Component Designator: OldDesignator=R16 NewDesignator=R19
+Change Component Designator: OldDesignator=R17 NewDesignator=R18
+Change Component Designator: OldDesignator=R18 NewDesignator=R21
+Change Component Designator: OldDesignator=R19 NewDesignator=R22
+Change Component Designator: OldDesignator=R20 NewDesignator=R24
+Change Component Designator: OldDesignator=R21 NewDesignator=R25
+Change Component Designator: OldDesignator=R22 NewDesignator=R27
+Change Component Designator: OldDesignator=R23 NewDesignator=R28
+Change Component Designator: OldDesignator=R24 NewDesignator=R4
+Change Component Designator: OldDesignator=R25 NewDesignator=R30
+Change Component Designator: OldDesignator=R26 NewDesignator=R31
+Change Component Designator: OldDesignator=R27 NewDesignator=R32
+Change Component Designator: OldDesignator=R28 NewDesignator=R33
+Change Component Designator: OldDesignator=R29 NewDesignator=R34
+Change Component Designator: OldDesignator=R30 NewDesignator=R35
+Change Component Designator: OldDesignator=R31 NewDesignator=R6
+Change Component Designator: OldDesignator=R32 NewDesignator=R20
+Change Component Designator: OldDesignator=R35 NewDesignator=R23
+Change Component Designator: OldDesignator=R37 NewDesignator=R26
+Change Component Designator: OldDesignator=R38 NewDesignator=R29
+Change Component Designator: OldDesignator=U3 NewDesignator=U4
+Change Component Designator: OldDesignator=U4 NewDesignator=U3
+Added Pin To Net: NetName=PB12 Pin=K1-1
+Change Net Name : Old Net Name=NetC8_2 New Net Name=NetC10_2
+Change Net Name : Old Net Name=NetC9_1 New Net Name=NetC5_1
+Change Net Name : Old Net Name=NetC9_2 New Net Name=NetC5_2
+Change Net Name : Old Net Name=NetC10_1 New Net Name=NetC8_1
+Change Net Name : Old Net Name=NetC10_2 New Net Name=NetC8_2
+Change Net Name : Old Net Name=NetC17_2 New Net Name=NetC16_2
+Change Net Name : Old Net Name=NetC34_2 New Net Name=NetC18_2
+Change Net Name : Old Net Name=NetD8_A New Net Name=NetD9_A
+Change Net Name : Old Net Name=NetD9_A New Net Name=NetD8_A
+Change Net Name : Old Net Name=NetJ4_1 New Net Name=NetJ5_1
+Change Net Name : Old Net Name=NetJ6_15 New Net Name=NetJ2_15
+Change Net Name : Old Net Name=NetJ6_26 New Net Name=NetJ2_26
+Change Net Name : Old Net Name=NetR9_1 New Net Name=NetR11_1
+Change Net Name : Old Net Name=NetR16_2 New Net Name=NetR19_2
+Change Net Name : Old Net Name=NetR18_1 New Net Name=NetR21_1
+Change Net Name : Old Net Name=NetR20_1 New Net Name=NetR24_1
+Change Net Name : Old Net Name=NetR21_1 New Net Name=NetR25_1
+Change Net Name : Old Net Name=NetR25_1 New Net Name=NetR30_1
+Change Net Name : Old Net Name=NetR25_2 New Net Name=NetR30_2
+Change Net Name : Old Net Name=NetR28_2 New Net Name=NetR33_2
+Added Member To Class: ClassName=Smart Humidifier Member=Component R33 2K/0603
+Added Member To Class: ClassName=Smart Humidifier Member=Component R34 4K7/0603
