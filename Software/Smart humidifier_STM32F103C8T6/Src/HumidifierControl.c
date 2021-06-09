@@ -2,7 +2,7 @@
 
 uint8_t Hum_Mod = Hum_Run;
 uint8_t AntiBur_Flag = 0;
-float Humidity_Set = 65;
+float Humidity_Set = 40;
 extern float humidity;
 
 /**
@@ -34,7 +34,7 @@ void Humidifier_Play(void){
 	else if( Hum_Mod == 0 )
 		Humidifier_Off();
 	else if( Hum_Mod == 2){
-		if( Hum_Mod == 2 ) Humidifier_On();//开5s
+			if( Hum_Mod == 2 ) Humidifier_On();//开5s
 		if( Hum_Mod == 2 ) HAL_Delay(500);
 		if( Hum_Mod == 2 ) HAL_Delay(500);
 		if( Hum_Mod == 2 ) HAL_Delay(500);
