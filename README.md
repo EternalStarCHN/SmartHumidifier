@@ -74,4 +74,4 @@ const int Con_Pin = 2;//模块联网状态(LOW:连接;HIGH:断开)
 # 作者申明
 切勿用于个人专利申请和商业用途，谢谢！
 # 许可证
-Smart Humidifier (Graduation Design) is licensed under [MIT License](https://github.com/EternalStarCHN/Graduation-Design/blob/master/LICENSE) .
+Smart Humidifier (Graduation Design) is licensed under [GNU General Public License v3.0](https://github.com/EternalStarCHN/Graduation-Design/blob/master/LICENSE) .
