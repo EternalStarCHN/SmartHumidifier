@@ -1,61 +1,132 @@
-T2F78 000:016.863   SEGGER J-Link V6.72b Log File
-T2F78 000:017.099   DLL Compiled: May  4 2020 13:43:39
-T2F78 000:017.111   Logging started @ 2021-05-16 12:10
-T2F78 000:017.121 JLINK_SetWarnOutHandler(...)
-T2F78 000:017.128 - 0.010ms
-T2F78 000:017.141 JLINK_OpenEx(...)
-T2F78 000:018.623   Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
-T2F78 000:021.175   Hardware: V8.00
-T2F78 000:021.201   S/N: 788594195
-T2F78 000:021.213   OEM: SEGGER
-T2F78 000:021.225   Feature(s): RDI,FlashDL,FlashBP,JFlash,GDB
-T2F78 000:022.573   TELNET listener socket opened on port 19021
-T2F78 000:022.720   WEBSRV Starting webserver
-T2F78 000:022.945   WEBSRV Webserver running on local port 19080
-T2F78 000:022.968 - 5.833ms returns "O.K."
-T2F78 000:023.004 JLINK_GetEmuCaps()
-T2F78 000:023.013 - 0.013ms returns 0xB9FF7BBF
-T2F78 000:023.027 JLINK_TIF_GetAvailable(...)
-T2F78 000:023.232 - 0.214ms
-T2F78 000:023.252 JLINK_SetErrorOutHandler(...)
-T2F78 000:023.258 - 0.009ms
-T2F78 000:023.284 JLINK_ExecCommand("ProjectFile = "F:\Desktop\Graduation-Design\Software\Smart humidifier_STM32F103C8T6\MDK-ARM\JLinkSettings.ini"", ...). 
-T2F78 000:056.533   Ref file found at: D:\Software\Keil_v5\ARM\Segger\JLinkDevices.ref
-T2F78 000:084.718   XML referenced by ref file: D:\Software\Keil_v5\SEGGER\JLink\JLinkDevices.xml
-T2F78 000:098.971   D:\Software\Keil_v5\SEGGER\JLink\JLinkDevices.xml evaluated successfully.
-T2F78 000:186.014 - 162.754ms returns 0x00
-T2F78 000:189.027 JLINK_ExecCommand("Device = STM32F103C8", ...). 
-T2F78 000:191.925   Device "STM32F103C8" selected.
-T2F78 000:192.435 - 3.397ms returns 0x00
-T2F78 000:192.453 JLINK_ExecCommand("DisableConnectionTimeout", ...). 
-T2F78 000:192.466 - 0.006ms returns 0x01
-T2F78 000:192.475 JLINK_GetHardwareVersion()
-T2F78 000:192.481 - 0.009ms returns 0x13880
-T2F78 000:192.495 JLINK_GetDLLVersion()  returns 67202
-T2F78 000:192.510 JLINK_GetFirmwareString(...)
-T2F78 000:192.516 - 0.008ms
-T2F78 000:200.514 JLINK_GetDLLVersion()  returns 67202
-T2F78 000:200.535 JLINK_GetCompileDateTime()
-T2F78 000:200.541 - 0.008ms
-T2F78 000:202.984 JLINK_GetFirmwareString(...)
-T2F78 000:203.001 - 0.020ms
-T2F78 000:205.126 JLINK_GetHardwareVersion()
-T2F78 000:205.140 - 0.016ms returns 0x13880
-T2F78 000:215.119 JLINK_TIF_Select(JLINKARM_TIF_SWD)
-T2F78 000:215.800 - 0.689ms returns 0x00
-T2F78 000:215.832 JLINK_SetSpeed(5000)
-T2F78 000:215.893 - 0.067ms
-T2F78 000:215.907 JLINK_GetId()
-T2F78 000:841.421   STM32 (connect): Can not attach to CPU. Trying connect under reset.
-T2F78 000:997.374   
-  ***** Error: 
-T2F78 000:997.391   STM32: Connecting to CPU via connect under reset failed.
-T2F78 001:208.159   STM32 (connect): Can not attach to CPU. Trying connect under reset.
-T2F78 001:362.408   
-  ***** Error: 
-T2F78 001:362.430   STM32: Connecting to CPU via connect under reset failed.
-T2F78 001:413.277 - 1197.385ms   returns 0x00000000
-T2F78 003:118.424 JLINK_Close()
-T2F78 003:121.408 - 2.995ms
-T2F78 003:121.423   
-T2F78 003:121.429   Closed
+T2D0C 000:203.985   SEGGER J-Link V7.22b Log File
+T2D0C 000:204.407   DLL Compiled: Jun 17 2021 17:22:49
+T2D0C 000:204.414   Logging started @ 2022-02-24 11:23
+T2D0C 000:204.420 - 204.423ms
+T2D0C 000:204.434 JLINK_SetWarnOutHandler(...)
+T2D0C 000:204.442 - 0.010ms
+T2D0C 000:204.450 JLINK_OpenEx(...)
+T2D0C 000:206.795   Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+T2D0C 000:207.394   Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+T2D0C 000:210.842   Hardware: V8.00
+T2D0C 000:210.857   S/N: 788594195
+T2D0C 000:210.875   OEM: SEGGER
+T2D0C 000:210.884   Feature(s): RDI,FlashDL,FlashBP,JFlash,GDB
+T2D0C 000:212.528   TELNET listener socket opened on port 19021
+T2D0C 000:212.648   WEBSRV Starting webserver
+T2D0C 000:212.791   WEBSRV Webserver running on local port 19080
+T2D0C 000:212.816 - 8.387ms returns "O.K."
+T2D0C 000:212.851 JLINK_GetEmuCaps()
+T2D0C 000:212.871 - 0.022ms returns 0xB9FF7BBF
+T2D0C 000:212.896 JLINK_TIF_GetAvailable(...)
+T2D0C 000:213.131 - 0.242ms
+T2D0C 000:213.151 JLINK_SetErrorOutHandler(...)
+T2D0C 000:213.162 - 0.018ms
+T2D0C 000:213.224 JLINK_ExecCommand("ProjectFile = "F:\Desktop\Graduation-Design\Software\Smart humidifier_STM32F103C8T6\MDK-ARM\JLinkSettings.ini"", ...). 
+T2D0C 000:225.650 - 12.436ms returns 0x00
+T2D0C 000:225.679 JLINK_ExecCommand("Device = STM32F103C8", ...). 
+T2D0C 000:225.946   Device "STM32F103C8" selected.
+T2D0C 000:226.544 - 0.862ms returns 0x00
+T2D0C 000:226.574 JLINK_GetHardwareVersion()
+T2D0C 000:226.581 - 0.009ms returns 80000
+T2D0C 000:226.590 JLINK_GetDLLVersion()
+T2D0C 000:226.595 - 0.008ms returns 72202
+T2D0C 000:226.603 JLINK_GetOEMString(...)
+T2D0C 000:226.610 JLINK_GetFirmwareString(...)
+T2D0C 000:226.621 - 0.013ms
+T2D0C 000:226.631 JLINK_GetDLLVersion()
+T2D0C 000:226.637 - 0.008ms returns 72202
+T2D0C 000:226.644 JLINK_GetCompileDateTime()
+T2D0C 000:226.650 - 0.008ms
+T2D0C 000:226.659 JLINK_GetFirmwareString(...)
+T2D0C 000:226.665 - 0.008ms
+T2D0C 000:226.673 JLINK_GetHardwareVersion()
+T2D0C 000:226.678 - 0.008ms returns 80000
+T2D0C 000:226.686 JLINK_GetSN()
+T2D0C 000:226.692 - 0.008ms returns 788594195
+T2D0C 000:226.720 JLINK_GetOEMString(...)
+T2D0C 000:226.738 JLINK_TIF_Select(JLINKARM_TIF_SWD)
+T2D0C 000:227.837 - 1.108ms returns 0x00
+T2D0C 000:227.854 JLINK_HasError()
+T2D0C 000:227.880 JLINK_SetSpeed(5000)
+T2D0C 000:228.078 - 0.205ms
+T2D0C 000:228.730 JLINK_HasError()
+T2D0C 000:228.745 JLINK_SetResetType(JLINKARM_RESET_TYPE_NORMAL)
+T2D0C 000:228.751 - 0.009ms returns JLINKARM_RESET_TYPE_NORMAL
+T2D0C 000:228.759 JLINK_Reset()
+T2D0C 000:229.136   InitTarget() start
+T2D0C 000:229.162    J-Link Script File: Executing InitTarget()
+T2D0C 000:242.559   Active write protection detected.
+T2D0C 000:242.881   Looking for J-Link GUI Server exe at: D:\Software\Keil_v5\ARM\Segger\JLinkGUIServer.exe
+T2D0C 000:243.000   Looking for J-Link GUI Server exe at: \JLinkGUIServer.exe
+T2D0C 000:542.453   Failed to connect to J-Link GUI Server.
+T2D0C 002:977.495   Skipping unsecure.
+T2D0C 002:977.536   InitTarget() end
+T2D0C 002:978.332   Found SW-DP with ID 0x2BA01477
+T2D0C 002:984.029   Old FW that does not support reading DPIDR via DAP jobs
+T2D0C 002:990.056   DPv0 detected
+T2D0C 002:990.089   Scanning AP map to find all available APs
+T2D0C 002:993.653   AP[1]: Stopped AP scan as end of AP map has been reached
+T2D0C 002:993.670   AP[0]: AHB-AP (IDR: 0x24770011)
+T2D0C 002:993.679   Iterating through AP map to find AHB-AP to use
+T2D0C 002:999.840   AP[0]: Core found
+T2D0C 002:999.858   AP[0]: AHB-AP ROM base: 0xE00FF000
+T2D0C 003:003.073   CPUID register: 0x410FC241. Implementer code: 0x41 (ARM)
+T2D0C 003:003.089   Found Cortex-M4 r0p1, Little endian.
+T2D0C 003:104.224   Identified core does not match configuration. (Found: Cortex-M4, Configured: Cortex-M3)
+T2D0C 003:105.066   -- Max. mem block: 0x00002408
+T2D0C 003:105.469   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T2D0C 003:105.988   CPU_WriteMem(4 bytes @ 0xE000EDF0)
+T2D0C 003:106.517   CPU_ReadMem(4 bytes @ 0xE0002000)
+T2D0C 003:107.006   FPUnit: 6 code (BP) slots and 2 literal slots
+T2D0C 003:107.076   CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T2D0C 003:107.560   CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T2D0C 003:108.059   CPU_ReadMem(4 bytes @ 0xE0001000)
+T2D0C 003:108.558   CPU_WriteMem(4 bytes @ 0xE0001000)
+T2D0C 003:109.090   CPU_ReadMem(4 bytes @ 0xE000ED88)
+T2D0C 003:109.548   CPU_WriteMem(4 bytes @ 0xE000ED88)
+T2D0C 003:110.045   CPU_ReadMem(4 bytes @ 0xE000ED88)
+T2D0C 003:110.546   CPU_WriteMem(4 bytes @ 0xE000ED88)
+T2D0C 003:111.068   CoreSight components:
+T2D0C 003:111.080   ROMTbl[0] @ E00FF000
+T2D0C 003:111.089   CPU_ReadMem(64 bytes @ 0xE00FF000)
+T2D0C 003:111.998   CPU_ReadMem(32 bytes @ 0xE000EFE0)
+T2D0C 003:112.685   ROMTbl[0][0]: E000E000, CID: B105E00D, PID: 000BB00C SCS-M7
+T2D0C 003:112.716   CPU_ReadMem(32 bytes @ 0xE0001FE0)
+T2D0C 003:113.448   ROMTbl[0][1]: E0001000, CID: B105E00D, PID: 003BB002 DWT
+T2D0C 003:113.469   CPU_ReadMem(32 bytes @ 0xE0002FE0)
+T2D0C 003:114.147   ROMTbl[0][2]: E0002000, CID: B105E00D, PID: 002BB003 FPB
+T2D0C 003:114.163   CPU_ReadMem(32 bytes @ 0xE0000FE0)
+T2D0C 003:114.956   ROMTbl[0][3]: E0000000, CID: B105E00D, PID: 003BB001 ITM
+T2D0C 003:115.000   CPU_ReadMem(32 bytes @ 0xE0040FE0)
+T2D0C 003:115.645   ROMTbl[0][4]: E0040000, CID: B105900D, PID: 000BB9A1 TPIU
+T2D0C 003:115.661   CPU_ReadMem(32 bytes @ 0xE0041FE0)
+T2D0C 003:116.294   ROMTbl[0][5]: E0041000, CID: B105900D, PID: 000BB925 ETM
+T2D0C 003:116.372   CPU is running
+T2D0C 003:116.386   CPU_WriteMem(4 bytes @ 0xE000EDF0)
+T2D0C 003:116.894   CPU is running
+T2D0C 003:116.905   CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T2D0C 003:117.450   Reset: Halt core after reset via DEMCR.VC_CORERESET.
+T2D0C 003:118.028   Reset: Reset device via AIRCR.SYSRESETREQ.
+T2D0C 003:118.040   CPU is running
+T2D0C 003:118.050   CPU_WriteMem(4 bytes @ 0xE000ED0C)
+T2D0C 003:171.729   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T2D0C 003:172.349   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T2D0C 003:172.851   CPU is running
+T2D0C 003:172.865   CPU_WriteMem(4 bytes @ 0xE000EDF0)
+T2D0C 003:173.461   CPU is running
+T2D0C 003:173.473   CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T2D0C 003:179.828   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T2D0C 003:182.997   CPU_WriteMem(4 bytes @ 0xE0002000)
+T2D0C 003:183.845   CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T2D0C 003:184.493   CPU_ReadMem(4 bytes @ 0xE0001000)
+T2D0C 003:185.018 - 2956.266ms
+T2D0C 003:185.057 JLINK_GetId()
+T2D0C 003:185.783 - 0.734ms returns 0x2BA01477
+T2D0C 003:195.876 JLINK_GetFirmwareString(...)
+T2D0C 003:195.917 - 0.045ms
+T2D0C 009:060.165 JLINK_Close()
+T2D0C 009:060.732   CPU_ReadMem(4 bytes @ 0xE0001000)
+T2D0C 009:061.351   CPU_WriteMem(4 bytes @ 0xE0001004)
+T2D0C 009:085.114 - 24.963ms
+T2D0C 009:085.132   
+T2D0C 009:085.138   Closed
