@@ -1,5 +1,5 @@
 # 介绍
- “聪明的加湿器”（本科毕业设计）是一款基于STM32F103C8T6单片机实现的智能加湿器，它与互联网相连接，可以使用天猫精灵等智能音箱或手机App进行运行状态的控制。
+ “聪明的加湿器”是一款基于STM32单片机和Esp8266实现的智能加湿器，它与互联网相连接，可以使用天猫精灵等智能音箱或手机App进行运行状态的控制。
 
  它主要由**硬件**和**软件**两个部分构成，可以通过修改相应电路和代码实现功能的更新。
  # 硬件
@@ -71,7 +71,5 @@ const int Con_Pin = 2;//模块联网状态(LOW:连接;HIGH:断开)
  ## APP程序
  控制“聪明的加湿器”所使用的APP是基于**APP INVENTOR**编写的，国内网址：`http://app.gzjkw.net/`  
  与ESP模块的代码相似，通过修改APP代码中的值即可实现与自己设备的连接。
-# 作者申明
-切勿用于个人专利申请和商业用途，谢谢！
 # 许可证
 Smart Humidifier (Graduation Design) is licensed under [GNU General Public License v3.0](https://github.com/EternalStarCHN/Graduation-Design/blob/master/LICENSE) .
